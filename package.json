@@ -1,0 +1,12 @@
+{
+  "name": "pink",
+  "version": "1.0.0",
+  "description": "A portal on breast cancer detection\r <img src=\"https://media.tenor.com/b9bqjkjXXs8AAAAM/october-1st.gif\"><img>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vidit , Rajan , Gautam , Mohit",
+  "license": "ISC"
+}
