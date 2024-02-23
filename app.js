@@ -6,6 +6,7 @@ app.get('/', function(req, res){
    
     res.render("index.ejs");
 })
+
 app.listen(port,()=>{
     console.log(`Server running on ${port}`);
 })
