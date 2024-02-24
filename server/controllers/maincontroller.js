@@ -1,5 +1,5 @@
-const home = async(req,res)=>{
-    res.render("home.ejs");
+const login = async(req,res)=>{
+    res.render("login.ejs");
 }
 const about = async(req,res)=>{
     res.send("<h1>About Page</h1>");
@@ -7,4 +7,4 @@ const about = async(req,res)=>{
 const contact = async(req,res)=>{
     res.send("<h1>Contact Page</h1>");
 }
-module.exports ={home,about,contact};
+module.exports ={login,about,contact};

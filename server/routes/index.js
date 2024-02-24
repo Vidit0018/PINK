@@ -1,10 +1,7 @@
 const express = require("express");
 const router = express.Router();
-
-const {home,about,contact,} =require("../controllers/maincontroller")
-
-router.route("/home").get(home);
-router.route("/about").get(about);
-router.route("/contact").get(contact);
-
+const {login,about,contact} =require("../controllers/maincontroller")
+router.get("/login", login);
+router.get("/about", about);
+router.get("/contact", contact);
 module.exports= router;
