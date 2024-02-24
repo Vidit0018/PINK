@@ -1,5 +1,5 @@
 const home = async(req,res)=>{
-    res.send("<h1>Home Page</h1>");
+    res.render("home.ejs");
 }
 const about = async(req,res)=>{
     res.send("<h1>About Page</h1>");

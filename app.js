@@ -3,11 +3,11 @@ const express = require('express');
 
 const app = express();
 const port = 3000;
-
-app.use(express.static("public"));
+const path=require("path");
+app.use(express.static(path.join(__dirname,"/public")));
 
 const page_routes = require ("./server/routes/index")
-
+console.log(__dirname);
 app.get("/", function (req, res) {
   res.render("login.ejs");
 });
