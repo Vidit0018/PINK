@@ -4,8 +4,8 @@
 /*===== VARIABLES CSS =====*/
 :root{
   /*===== Colores =====*/
-  --first-color: #9D4BFF;
-  --first-color-dark: #23004D;
+  --first-color: #FF407D;
+  --first-color-dark: #DA0C81;
   --first-color-light: #A49EAC;
   --first-color-lighten: #F2F2F2;
 
@@ -219,6 +219,7 @@ img{
 
   .login__img{
     display: flex;
+    align-items: center;
     width: 600px;
     height: 588px;
     background-color: var(--first-color-lighten);
@@ -228,6 +229,7 @@ img{
 
   .login__img img{
     width: 390px;
+    height: 400px;
     margin-top: 0;
   }
 
