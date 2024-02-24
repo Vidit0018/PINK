@@ -9,7 +9,7 @@ app.use(express.static("public"));
 const page_routes = require ("./server/routes/index")
 
 app.get("/", function (req, res) {
-  res.render("index.ejs");
+  res.render("login.ejs");
 });
 app.use("/routes", page_routes);
 
