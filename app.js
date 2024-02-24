@@ -9,8 +9,6 @@ const ejs_mate=require("ejs-mate");
 app.engine("ejs",ejs_mate);
 app.use(express.urlencoded({ extended: true }));
 const methodoverride=require("method-override");
-const expressLayouts = require('express-ejs-layouts');
-app.use(expressLayouts);
 app.use(methodoverride("_method"));
 app.set("view engine", "ejs");
 app.set("views",path.join(__dirname,"views"));
