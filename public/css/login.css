@@ -31,6 +31,8 @@
 body{
   margin: 0;
   padding: 0;
+  position: relative;
+  top: 0px;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--first-color-dark);
