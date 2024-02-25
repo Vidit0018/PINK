@@ -7,4 +7,7 @@ const home = async(req,res)=>{
 const contact = async(req,res)=>{
     res.send("<h1>Contact Page</h1>");
 }
-module.exports ={login,home,contact};
+const userprofile = async(req,res)=>{
+    res.render("userprofile.ejs");
+}
+module.exports ={login,home,contact,userprofile};

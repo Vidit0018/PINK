@@ -1,0 +1,7 @@
+:root{
+    --first-color: #FF407D;
+  --first-color-dark: #DA0C81;
+}
+body{
+    background: var(--first-color);
+}
