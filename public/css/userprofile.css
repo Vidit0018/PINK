@@ -97,6 +97,14 @@ label.btn {
   .card{
     background: white;
   }
+  .alert-warning{
+    background: var(--lightbg);
+    color: white;
+  }
+  .alert-warning a{
+    color: white;
+    text-decoration: none;
+  }
   #list-item a{
     color: var(--first-color-dark);
   }
