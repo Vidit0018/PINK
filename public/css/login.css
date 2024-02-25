@@ -150,8 +150,9 @@ img{
 
 .login__button{
   display: block;
+  width: 150px;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 5rem;
   background-color: var(--first-color);
   color: #FFF;
   font-weight: 600;
@@ -159,6 +160,7 @@ img{
   border-radius: .5rem;
   transition: .3s;
 }
+ 
 
 .login__button:hover{
   background-color: var(--first-color-dark);
