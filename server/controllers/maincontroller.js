@@ -7,6 +7,7 @@ cloudinary.config({
   api_key: '779135273943798', 
   api_secret: 'riHpwxvUAlHEcTNBdotlGuZrXGY' 
 });
+
 const login = async(req,res)=>{
     res.render("login.ejs");
 }
@@ -64,6 +65,7 @@ const signup_post=async(req,res)=>{
                     res.status(500).send("Internal Server Error");
                 }
             }
+            
             const userprofile=async(req,res)=>{
                 res.render(userprofile.ejs);
             }
