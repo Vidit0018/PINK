@@ -39,7 +39,6 @@ nav a{
     width:100vw;
     height:100px;
     margin-inline:auto;
-    overflow:hidden;
 }
 
 nav{
@@ -109,6 +108,10 @@ nav{
     padding: 0;
     background-color: var(--first-color-dark);
     height:80px;
+}
+
+.white{
+    color:#FFFFFF;
 }
 
 .dropdown-item{
