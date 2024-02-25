@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
 
-*{
+/* *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
+} */
 
 :root{
     --first-color: #FF407D;
@@ -56,11 +56,14 @@ nav{
     padding: 8px 0px;
     transition: all 0.4s ease;
 }
-
+.main-nav a {
+    text-decoration: none;
+}
 .company-logo{
     margin-left:4rem;
     font-size:35px;
     font-weight:36px;
+    color: var(--text-color-1);
 }
 
 .nav-links ul li{

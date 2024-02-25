@@ -5,26 +5,39 @@
     --first-color-dark: #DA0C81;
 }
 body{
+    margin-top: 100px;
     background: var(--lightbg);
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: flex-start;
 }
 .design-img{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+   
     height: 400px;
     width: 400px;
+    margin-bottom: 20px;
 }
 *{
     font-family: 'Poppins', sans-serif;
     color: var(--first-color);
 }
-.container{
+/* .container{
     position: absolute;
     left: 10px;
     margin-bottom: 20px;
     padding: 10px;
+} */
+.left
+{
+    width: 70vw;
+
+}
+.right
+{   height: 700px;
+    width: 400px;
+    display: flex;
+    align-items: flex-end;   
 }
 
 .ui-w-80 {
