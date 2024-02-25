@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
 
 :root{
     --first-color: #FF407D;
   --first-color-dark: #DA0C81;
   --button-color:#C70A6E;
 }
+
+::selection{
+  background-color: #f0addd;
+  color:white;
+  border-radius: ;
+}
+
 body{
-    background: var(--first-color);
+    background:#e17e9d ;
 }
 
 .wrapper{
@@ -43,18 +51,37 @@ body{
   width:51.8rem;
   align-items:center;
   padding-top:5rem;
+  color:var(--button-color);
+  font-family: 'Poppins',sans-serif;
   /* justify-content: center; */
 }
 
 .right h1{
+  /* font-family: 'Poppins:wght@900'; */
+  font-family: 'Poppins',sans-serif;
+  font-weight:900 ;
   margin-bottom:3rem;
+  color:var(--first-color-dark);
+  text-shadow: 5px 5px #e17e9d;
+}
+
+.right p{
+  font-size: 1.4rem;
+  font-weight:500;
 }
 
 .right button{
   margin-top:0.7rem;
   border-radius:3rem;
   height:3rem;
-  width:7rem;
+  width:8.5rem;
   background-color:var(--button-color);
   border:none;
+  color:#FFFFFF;
+  transition: all 0.25s ease-in;
+}
+
+.right button:hover{
+  background-color:#FFFFFF;
+  color:var(--button-color);
 }
