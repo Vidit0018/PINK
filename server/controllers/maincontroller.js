@@ -1,5 +1,7 @@
 const User=require("../config/models/userschema");
 const bcrypt=require("bcryptjs");
+const multer=require("multer");
+const UploadCloudinary=require("../config/db/cloudinary");
 const login = async(req,res)=>{
     res.render("login.ejs");
 }
@@ -57,11 +59,55 @@ const signup_post=async(req,res)=>{
                     res.status(500).send("Internal Server Error");
                 }
             }
-
 const userprofile = async(req,res)=>{
-    res.render("userprofile.ejs")
+    try {
+        let { id } = req.params;
+        console.log(id);
+        let editdata = await Register.findById(id);
+    
+        if (!editdata) {
+          return res.status(404).send('User not found'); // Handle if user is not found
+         }
+    
+         res.render("userprofile.ejs");
+           } catch (error) {
+         console.error(error);
+         res.status(500).send('Internal Server Error');
+       }
+     
+    
 }
 const volunteer = async(req,res)=>{
     res.render("volunteer.ejs")
 }
+// used multer for starge file........................................>
+var storage=multer.diskStorage({
+    destination: function(req,file,cb){
+        cb(null,"./public/images");
+    },
+     filename: function(req, file, cb) {
+        const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1E9);
+        cb(null, file.fieldname + "-" + uniqueSuffix + path.extname(file.originalname));
+      }
+  });
+// used multer for uploading files..........................>
+  var upload=multer({
+    storage:storage,
+    fileFilter:function(req,file,callback){
+        const allowedMimeTypes = [ "image/jpeg","image/jpg", "image/png"];
+        if (allowedMimeTypes.includes(file.mimetype)) {
+          callback(null, true);
+        }
+        else{
+            console.log("only jpg and png file is accepted");
+            callback(null,false);
+        }
+    },
+    limits:{
+        fileSize:1024*2
+    }
+  });
+
+
+
 module.exports ={login,home,contact,userprofile,signup_post,login_post,volunteer};
