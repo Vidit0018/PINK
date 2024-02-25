@@ -110,3 +110,7 @@ nav{
     background-color: var(--first-color-dark);
     height:80px;
 }
+
+.dropdown-item{
+  background: white;
+}

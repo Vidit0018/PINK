@@ -73,7 +73,7 @@ const signup_post=async(req,res)=>{
 const volunteer = async(req,res)=>{
     res.render("volunteer.ejs")
 }
-  Router.put("/")
+//   Router.put("/")
 module.exports ={
     login,home,contact,userprofile,signup_post,login_post,volunteer,fileUpload
 };
