@@ -15,6 +15,9 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"/public")));
 const page_routes = require ("./server/routes/index")
 app.use("/", page_routes);
+app.use(page_routes({
+  useTempFiles:true
+}))
 app.listen(port, () => {
   console.log(`Server running on ${port}`);
 });
