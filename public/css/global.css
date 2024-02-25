@@ -1,0 +1,14 @@
+.login-button{
+    font-family: "Poppins:ital",sans-serif;
+    color:#C70A6E;
+    padding:8px 24px;
+    border:none;
+    font-weight:1000;
+    border-radius:1.5rem;
+    cursor:pointer;
+    background-color:#FFFFFF;
+}
+
+.login-button:hover{
+    background-color: #f5bad9;
+}

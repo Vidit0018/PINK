@@ -1,0 +1,29 @@
+<nav>
+    <div class="main-nav nav-container flex">
+        <a href="#" class="company-logo">
+            PINKAWARE
+        </a>
+        <div class="nav-links">
+            <ul class="flex">
+                <li class="hover-link nav-item"><a href="#">Home</a></li>
+                <li class="hover-link nav-item"><a href="#">About<a></li>
+                <li class="hover-link nav-item"><a href="#">Contact</a></li>
+                <li class="hover-link nav-item"><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="login flex">
+            <button id="login-button" class="login-button">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<script>
+    window.addEventListener('scroll', function() {
+var nav = document.querySelector('.main-nav');
+if (window.scrollY > 50) {
+    nav.classList.add('affix');
+} else {
+    nav.classList.remove('affix');
+}
+});
+</script>
