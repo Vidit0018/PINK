@@ -65,15 +65,20 @@ const signup_post=async(req,res)=>{
                     res.status(500).send("Internal Server Error");
                 }
             }
-
-            const userprofile=async(req,res)=>{
-                res.render("userprofile.ejs");
-            }
+const userprofile=async(req,res)=>{
+    res.render("userprofile.ejs");
+}
 
 const volunteer = async(req,res)=>{
     res.render("volunteer.ejs")
 }
+const donation = async(req,res)=>{
+    res.render("donation.ejs")
+}
+const donation_form = async(req,res)=>{
+    res.render("donation_form.ejs")
+}
 //   Router.put("/")
 module.exports ={
-    login,home,contact,userprofile,signup_post,login_post,volunteer,fileUpload
+    login,home,contact,userprofile,signup_post,login_post,volunteer,fileUpload,donation,donation_form
 };

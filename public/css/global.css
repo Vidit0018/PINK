@@ -28,9 +28,9 @@
     font-weight: 800;
 }
 .btn-primary:hover{
-    border: 2px solid var(--first-color-dark);
-    background: white;
-    color: var(--first-color-dark);
+    border: 2px solid green;
+    background: green;
+    color: white;
     transition: 0.25s ease-in-out;
     
 }
