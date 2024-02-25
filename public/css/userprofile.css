@@ -44,7 +44,13 @@ body{
     width : 80px !important;
     height: auto;
 }
-
+.img-input{
+    border: 2px solid var(--first-color-dark);
+    height: 100px;
+    border-radius: 10px;
+    width: 100x;
+    padding: 5px;
+}
 .btn-default {
     border-color: rgba(24, 28, 33, 0.1);
     background  : rgba(0, 0, 0, 0);
