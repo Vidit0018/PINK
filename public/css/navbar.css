@@ -63,7 +63,7 @@ nav{
     margin-left:4rem;
     font-size:35px;
     font-weight:36px;
-    color: var(--text-color-1);
+    color: var(--bg-color-dark-1);
 }
 
 .nav-links ul li{
@@ -71,11 +71,13 @@ nav{
 }
 
 .nav-item a{
+    text-shadow:1px 2px 1px #c2768e;
+    color:var(--bg-color-dark-1);
     transition : all 0.15s ease-in;
 }
 
 .nav-item a:hover{
-    color:var(--bg-color-dark-1);
+    color:var(--text-color-1);
 }
 
 .hover-link{
