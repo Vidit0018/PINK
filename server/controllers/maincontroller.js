@@ -1,4 +1,5 @@
 const User=require("../config/models/userschema");
+const bcrypt=require("bcryptjs");
 const login = async(req,res)=>{
     res.render("login.ejs");
 }
@@ -23,6 +24,40 @@ const signup_post=async(req,res)=>{
         res.status(500).send("Error registering user.");
     }
         }
+        const login_post=async(req,res)=>{
+            
+                try {
+                    const Username= req.body.Username;
+                    const Password = req.body.Password;
+                    // const Email=req.body.Email;
+              
+                    // Check if Email and Password are present in the request body
+                    if (!Username || !Password) {
+                        return res.status(400).send("Email and Password are required");
+                    }
+              
+                    const user = await User.findOne({ Username });
+              
+                    // Check if the user exists in the database
+                    if (!user) {
+                        return res.status(404).send("User not found");
+                    }
+              
+                    const isMatch = await bcrypt.compare(Password, user.Password);
+              
+                    // Check if the passwords match
+                    if (isMatch) {
+                      console.log({Password,Username});
+                        res.send("you successfully signin");
+                    } else {
+                        res.status(401).send("Invalid Username and password");
+                    }
+                } catch (error) {
+                    console.error("Error during login:", error);
+                    res.status(500).send("Internal Server Error");
+                }
+            }
+        
 module.exports ={
-login,home,signup,signup_post
+login,home,signup,signup_post,login_post
 };
