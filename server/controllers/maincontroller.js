@@ -65,9 +65,9 @@ const signup_post=async(req,res)=>{
                     res.status(500).send("Internal Server Error");
                 }
             }
-            
+
             const userprofile=async(req,res)=>{
-                res.render(userprofile.ejs);
+                res.render("userprofile.ejs");
             }
 
 const volunteer = async(req,res)=>{
