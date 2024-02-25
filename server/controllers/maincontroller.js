@@ -61,4 +61,7 @@ const signup_post=async(req,res)=>{
 const userprofile = async(req,res)=>{
     res.render("userprofile.ejs")
 }
-module.exports ={login,home,contact,userprofile,signup_post,login_post};
+const volunteer = async(req,res)=>{
+    res.render("volunteer.ejs")
+}
+module.exports ={login,home,contact,userprofile,signup_post,login_post,volunteer};
