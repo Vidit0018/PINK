@@ -37,7 +37,7 @@ nav a{
 
 .nav-container{
     width:100vw;
-    height:112px;
+    height:100px;
     margin-inline:auto;
     overflow:hidden;
 }
@@ -55,6 +55,7 @@ nav{
     justify-content: space-between;
     padding: 8px 0px;
     transition: all 0.4s ease;
+    height: 100px;
 }
 .main-nav a {
     text-decoration: none;
