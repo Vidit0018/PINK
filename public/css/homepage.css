@@ -14,6 +14,7 @@
 
 body{
     background:#FF407D ;
+    height:2000px;
 }
 
 .wrapper{
@@ -91,4 +92,37 @@ body{
   z-index:-10;
   top:0;
   transform:translateY(-50px);
+}
+
+/* Home page featured button */
+
+.features{
+  color:white;
+  width:100%;
+  font-weight:700;
+  margin-left:2rem;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height:30rem;
+}
+
+.features div{
+  aspect-ratio:1/1;
+  height:15rem;
+  text-align:center;
+}
+
+.features img{
+  height:50%;
+  width:50%;
+  border:2px solid white;
+  overflow:hidden;
+  border-radius:50%;
+  margin-bottom:3px;
+  transition:all 0.20s ease-in;
+}
+
+.features img:hover{
+  transform:scale(1.05) translateY(-3px);
 }
