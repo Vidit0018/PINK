@@ -1,0 +1,206 @@
+body {
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+.profiles-wrapper{
+    margin-top: 40vh;
+    width: 100vw;
+    height: 100vh;
+    background: yellow;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* .all {
+    width:40%;
+    margin: 10%;
+    
+} */
+ .container{
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.container .card-1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.card-1 img{
+    padding: 10px;
+    width: 300px;
+    border-radius: 35px;
+}
+.container .card-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 20px;
+}
+.card-2 h1{
+    margin: 0;
+    padding: 0;
+}
+.card-2 h2{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+.card-2 .boxx{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: rgba(172, 172, 172, 0.329);
+    padding: 20px;
+    border-radius: 20px;
+}
+.box .desc-1{
+    display: flex;
+    flex-direction: column;
+}
+.box .desc-1 h3{
+    margin: 0;
+    padding: 0;
+}
+.click{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.click .chat{
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: black solid 1px;
+    font-size: 15px;
+    background-color: transparent;
+}
+.click .follow{
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 870px){
+    .all .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container .card-1 .photo{
+        width: 100%;
+        padding: 20px;
+    }
+    .card-1 .photo img{
+        width: 100%;
+        border-radius: 20px;
+        padding: 0;
+    }
+    .container .card-2{
+        text-align: center;
+        padding: 0;
+    }
+    .boxx .box{
+        margin: 20px;
+    }
+    .box .desc-1 h3{
+        margin: 0;
+        padding: 0;
+    }
+    .button{
+        display: flex;
+        padding-bottom: 20px;
+    }
+    .click{
+        justify-content: space-evenly;
+    }
+    .click .chat{
+        padding: 20px 100px;
+        font-size: 15px;
+    }
+    .click .follow{
+        padding: 20px 100px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .click .chat{
+        padding: 20px 80px;
+        font-size: 15px;
+    }
+    .click .follow{
+        padding: 20px 80px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .click .chat{
+        padding: 20px 60px;
+        font-size: 15px;
+    }
+    .click .follow{
+        padding: 20px 60px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .click .chat{
+        padding: 15px 50px;
+        font-size: 15px;
+    }
+    .click .follow{
+        padding: 15px 50px;
+        font-size: 15px;
+    }
+    .boxx .box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .box .desc-1 h1{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 375px){
+    .click .chat{
+        padding: 15px 40px;
+        font-size: 15px;
+    }
+    .click .follow{
+        padding: 15px 40px;
+        font-size: 15px;
+    }
+    .boxx .box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .box .desc-1 h1{
+        font-size: 25px;
+    }
+    .box .desc-1 h3{
+        font-size: 15px;
+    }
+    .button{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,7 +1,15 @@
+:root{
+    /*===== Colores =====*/
+    --first-color: #FF407D;
+    --first-color-dark: #DA0C81;
+    --first-color-light: #A49EAC;
+    --first-color-lighten: #F2F2F2;
+    --lightbg: #ff9bd2;
+}
 .donation-images{
     font-family: "Poppins:ital",sans-serif;
     font-weight: 800;
-    margin-top:100px;
+    margin-top:60px;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -13,10 +21,9 @@
 }
 .donation-card{
     width: 60vw;
-    padding: 20px;
     border-radius: 50px;
     background: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(1000px);
 }
 .col{
     width: 33vw;
@@ -32,8 +39,137 @@
 }
 body{
     padding: 10px;
-    background: url('../images/donation-3.jpg');
+    background: url('../images/withbg/background-image-1.jpg');
     background-size: cover;
     height: 150vh;
     
+}
+.progress-bg {
+	margin: 0 auto;
+    font-family: "Poppins:ital",sans-serif;
+    background-color: #ff9bd2;
+	width: 65%;
+	height: 78px;
+	border-radius: 10px;
+  text-align: center;
+	-moz-box-shadow:    inset 0 0 10px #ccc;
+	-webkit-box-shadow: inset 0 0 10px #ccc;
+	box-shadow:         inset 0 0 10px #ccc;
+}
+
+.progress-bar {
+	height: 78px;
+	border-radius: 10px;
+	float: left;
+    margin-bottom: 25px;
+	width: 50%;
+	/* fallback */ 
+	background-color: var(--);
+	
+	/* Safari 4-5, Chrome 1-9 */ 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1c314a), to(#27425f)); 
+	
+	/* Safari 5.1, Chrome 10+ */ 
+	background: -webkit-linear-gradient(top,#DA0C81,#FF407D); 
+	
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(top,#DA0C81,#FF407D); 
+	
+	/* IE 10 */ 
+	background: -ms-linear-gradient(top,#DA0C81,#FF407D); 
+	
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(top,#DA0C81,#FF407D);	
+}
+
+.progress-bg h3.goal, .progress-bg h3.raised {
+	font-family: "Poppins:ital",sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+	line-height: 78px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	display: inline;
+}
+
+
+.progress-bg h3.raised {
+	color: #fff;
+	margin: 14px 25px 0 50px;
+	padding: 0 25px 0 0;
+}
+
+.progress-bg h3.goal {
+    color: white;
+    text-align: center;
+}
+
+body #DA0C81 h3.raised {
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+       -moz-animation: fadein 4s; /* Firefox */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera */
+            animation: fadein 4s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}​
+
+/* Opera */
+​
+
+.progress-bg h3.goal {
+
+	float: right;
+	display: inline;
+	padding: 0 25px 0 0;
+  text-align: center;
+}
+
+body .progress-bg div {
+	-webkit-animation: progress-bar 2s ease forwards;
+	-moz-animation: progress-bar 2s ease forwards;
+	-o-animation: progress-bar 2s ease forwards;
+	animation: progress-bar 2s ease forwards;
+}
+
+@-webkit-keyframes progress-bar {
+    from { width: 0%; }
+    to { width: 50%; }
+}
+
+@-moz-keyframes progress-bar {
+    from { width: 0%; }
+    to { width: 50%; }
+}
+
+@-o-keyframes progress-bar {
+    from { width: 0%; }
+    to { width: 50%; }
+}
+
+@keyframes progress-bar {
+    from { width: 0%; }
+    to { width: 50%; }
 }

@@ -1,0 +1,109 @@
+<%layout("/layouts/boilerplate.ejs")%>
+<head>
+    <link rel="stylesheet" href="css/book-appointment.css">
+</head>
+<body>
+    <div class="form-wrapper">
+
+<div class="container">
+    <div class="well">
+        
+        <div class="well-header">BOOK Appointment</div>
+        <hr>
+       <p class="header_p">Even though walk-ins are Welcome, 
+        we encourage you to contact us via the form below to 
+        set your appointment. You will be contacted within 24 hours 
+        for confirmation.</p>
+        <hr>
+        
+        <!-- Contact by Input -->    
+        <div class="form-group1">
+          <label for="Select">Contac By:</label>
+          <select id="Select" class="form-control"><option>Email</option><option>Phone</option></select>
+        </div>
+        
+        <!-- fullname Input -->    
+        <div class="form-group1">
+            <label for="inputfullname"></label>
+            <input type="fullname" class="form-control" id="inputFullname" placeholder="Your Name">
+        </div>
+        
+        <!-- email address Input -->
+        <div class="form-group1">
+            <label for="inputemail"></label>
+            <input type="email" class="form-control" id="inputemail" placeholder="Your Email">
+        </div>
+        
+       <!-- Phone Input --> 
+         <div class="form-group1">
+            <label for="inputphone"></label>
+            <input type="phone" class="form-control" id="inputphone" placeholder="Your Phone">
+        </div>
+        <hr>
+      <!-- Appointment date -->  
+        <p>Appointment Date:</p>
+        
+     <!-- 1st Choice Input --> 
+    
+    
+         
+    <div class="form-group">
+        <label for="datepicer">1st Choice:</label>
+        <div class="input-group date" id="datetimepicker8">
+        <input type="text" class="form-control">
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+    </div>
+    </div>
+    
+    
+    
+                
+     <!-- 2nd Choice Input -->           
+    <div class="form-group">
+        <label for="datepicer">2nd Choice:</label>
+        <div class="input-group date" id="datetimepicker8">
+        <input type="text" class="form-control"><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+    </div>
+    
+    
+    <!-- Service Input -->
+    <div class="form-group">
+        <label for="Select">Desired Service:</label>
+        <select id="Select" class="form-control">
+        <option>Braids &amp; Twist</option>
+        <option>Clipper Cut</option>
+        <option>Corrective Color</option>
+        <option>Extensions Per Track</option>
+        <option>Full Foil</option>
+        <option>Haircolor</option>
+        <option>Haircut</option>
+        <option>Partial Foil</option>
+        <option>Relaxer/Retouch</option>
+        <option>Shampoo, Blow Dry or Se</option>
+        
+        </select>
+    </div>
+    
+        
+    <div class="form-group">
+        <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                            
+    </div>
+    
+    <!-- Button Area-->
+     <div class="checkbox">
+            <label><input type="checkbox">Terms &amp; conditions</label>
+        </div>
+        
+        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn">Cancel</button><hr>
+        <span class="help-block">all appointment have $10 cancellation fee, thank you.</span>
+    
+     
+     <!-- form end -->
+    </div><!-- well end -->
+    </div>
+    </div>
+    
+</body>
