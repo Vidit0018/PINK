@@ -6,6 +6,8 @@ const connection=require("./server/config/db/connection");
 const models=require("./server/config/models/userschema");
 app.use(express.json());
 const ejs_mate=require("ejs-mate");
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 app.engine("ejs",ejs_mate);
 app.use(express.urlencoded({ extended: true }));
 const methodoverride=require("method-override");

@@ -56,7 +56,7 @@ const signup_post=async(req,res)=>{
                     // Check if the passwords match
                     if (isMatch) {
                       console.log({Password,Username});
-                        res.send("you successfully signin");
+                        res.render("home.ejs",{ user});
                     } else {
                         res.status(401).send("Invalid Username and password");
                     }
@@ -65,8 +65,21 @@ const signup_post=async(req,res)=>{
                     res.status(500).send("Internal Server Error");
                 }
             }
-const userprofile=async(req,res)=>{
-    res.render("userprofile.ejs");
+const editprofile=async(req,res)=>{
+    try {
+        let { id } = req.params;
+        console.log(id);
+        let editdata = await User.findById(id);
+    
+        if (!editdata) {
+          return res.status(404).send('User not found'); // Handle if user is not found
+         }
+    
+         res.render("userprofile.ejs", { editdata });
+           } catch (error) {
+         console.error(error);
+         res.status(500).send('Internal Server Error');
+       }
 }
 
 const volunteer = async(req,res)=>{
@@ -86,7 +99,7 @@ const bookAppointment = async(req,res)=>{
 }
 //   Router.put("/")
 module.exports ={
-    login,home,contact,userprofile,signup_post,login_post,
+    login,home,contact,editprofile,signup_post,login_post,
     volunteer,fileUpload,donation,donation_form,
     appointment,bookAppointment
 };
