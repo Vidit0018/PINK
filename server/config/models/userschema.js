@@ -30,6 +30,9 @@ const womeninfo=new mongoose.Schema({
     Timing:{
         type:String,
     },  
+    Image1:{
+        type:String,
+    },
 });
 womeninfo.pre("save",async function(next){
     if(this.isModified('Password')){

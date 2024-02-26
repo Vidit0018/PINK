@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
+
 const {login,home,contact,editprofile,signup_post,login_post,volunteer,
-    donation,donation_form,appointment,bookAppointment,editprofileId} =require("../controllers/maincontroller")
+    donation,donation_form,appointment,bookAppointment,updateid,
+} =require("../controllers/maincontroller")
 router.get("/", login);
 router.get("/home", home);
 router.get("/contact", contact);
@@ -13,5 +15,5 @@ router.get("/donation", donation);
 router.get("/donation_form", donation_form);
 router.get("/appointment", appointment);
 router.get("/book-appointment", bookAppointment);
-// router.put("/editprofile/:id",editprofileId);
+router.put("/editprofile/:id",updateid);
 module.exports= router;
