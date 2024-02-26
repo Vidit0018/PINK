@@ -81,9 +81,12 @@ const donation_form = async(req,res)=>{
 const appointment = async(req,res)=>{
     res.render("appointment.ejs")
 }
+const bookAppointment = async(req,res)=>{
+    res.render("book-appointment.ejs")
+}
 //   Router.put("/")
 module.exports ={
     login,home,contact,userprofile,signup_post,login_post,
     volunteer,fileUpload,donation,donation_form,
-    appointment
+    appointment,bookAppointment
 };

@@ -1,0 +1,89 @@
+body{
+    background: var(--lightbg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins:ital",sans-serif;
+}
+
+.form-wrapper{
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 85%;
+    border-radius: 20%;
+    font-family: "Poppins:ital",sans-serif;
+}
+
+.well {
+    width: 100%;
+    padding: 3rem;
+    border: solid 2px var(--first-color);
+    background-color :var(--first-color);
+    border-radius: 5%;
+    content:"";
+    z-index:-1;
+    -webkit-box-shadow: 0 0 20px rgba(198, 156, 0, 1);
+    -moz-box-shadow: 0 0 20px rgba(198, 156, 0, 1);
+    box-shadow: 0 5px 20px var(--first-color);
+}
+
+.well-header {
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-family: "Poppins:ital",sans-serif;
+    color:white;
+    
+}
+
+#disabledSelect{
+    height: 30px;
+}
+/*
+.form-control {
+    height: 30px;
+}
+*/
+.form-group1 {
+    padding-bottom: 45px;
+    height: 5px;
+}
+
+
+
+#disabledSelect{
+    padding-bottom: 25px;
+}
+
+.input-group-addon,.fa> fa-calendar {
+    color: #FFE071;
+    background:white;
+    border: solid 1pxwhite;
+}
+
+p, label, checkbox {
+    font-size: 1em;
+    font-weight: bold;
+    color:white;
+    
+}
+
+.header_p {
+    font-size: 1.1em;
+}
+
+.btn{
+    color: rgba(198, 156, 0, 1);
+    background:white;
+    border: solid 1pxwhite;
+    ;
+}
+
+.help-block {
+    color:white;
+}
