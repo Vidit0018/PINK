@@ -23,7 +23,7 @@
     width: 60vw;
     border-radius: 50px;
     background: transparent;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(1000px);
 }
 .col{
     width: 33vw;
