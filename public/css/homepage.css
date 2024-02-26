@@ -10,11 +10,10 @@
 ::selection{
   background-color: #f0addd;
   color:white;
-  border-radius: ;
 }
 
 body{
-    background:#e17e9d ;
+    background:#FF407D ;
 }
 
 .wrapper{
@@ -62,7 +61,7 @@ body{
   font-weight:900 ;
   margin-bottom:3rem;
   color:var(--first-color-dark);
-  text-shadow: 5px 5px #e17e9d;
+  text-shadow: 5px 5px var(-);
 }
 
 .right p{
@@ -82,6 +81,15 @@ body{
 }
 
 .right button:hover{
-  background-color:#FFFFFF;
-  color:var(--button-color);
+  background-color:var(--first-color);
+  color:white;
+}
+
+.blur-svg{
+  position: absolute;
+  width:100%;
+  height:50rem;
+  z-index:-10;
+  top:0;
+  transform:translateY(-50px);
 }

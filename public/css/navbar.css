@@ -108,7 +108,7 @@ nav{
     color: var(--text-color-1);
     transition:all 0.2s ease-in;
     &:hover{
-        color:var(--first-color);
+        color:rgb(37, 81, 117);
     }
 }
 
