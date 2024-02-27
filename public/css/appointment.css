@@ -1,206 +1,204 @@
 body {
   background: pink;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   height: 100vh;
 
 }
-.profiles-wrapper{
-    margin-top: 40vh;
+
+.main-container{
+    position:relative;
+    display: flex;
+    height: 100%;
     width: 100vw;
-    height: 100vh;
-    background: yellow;
+    top:100px;
+    padding:2rem 1rem;
+} 
+
+.left{
+    background: var(--clr);
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-}
-/* .all {
-    width:40%;
-    margin: 10%;
-    
-} */
- .container{
-    background-color: rgb(255, 255, 255);
-    width: 45%;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    border-radius: 30px;
+    flex-direction:column;
     overflow: hidden;
-}
-.container .card-1{
-    width: 100%;
-    display: flex;
+    border-right:2px solid black;
+    /* justify-content:flex-end; */
     align-items: center;
-    padding: 0;
+    height: 100%;
+    width: 20vw;
 }
-.card-1 img{
-    padding: 10px;
-    width: 300px;
-    border-radius: 35px;
-}
-.container .card-2{
-    width: 100%;
+.right{
+    height: 100%;
+    width: 80vw;
+    margin-right: 20px;
+    margin-left: 20px;
+    /* background: var(--clr); */
+    background-color: yellow;
+    border-radius: 2rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 10px;
-    padding: 20px;
-}
-.card-2 h1{
-    margin: 0;
-    padding: 0;
-}
-.card-2 h2{
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-}
-.card-2 .boxx{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-.box{
-    display: flex;
-    align-items: center;
     justify-content: space-evenly;
-    text-align: center;
-    background-color: rgba(172, 172, 172, 0.329);
-    padding: 20px;
-    border-radius: 20px;
-}
-.box .desc-1{
-    display: flex;
-    flex-direction: column;
-}
-.box .desc-1 h3{
-    margin: 0;
-    padding: 0;
-}
-.click{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.click .chat{
-    padding: 10px 60px;
-    border-radius: 10px;
-    border: black solid 1px;
-    font-size: 15px;
-    background-color: transparent;
-}
-.click .follow{
-    padding: 10px 60px;
-    border-radius: 10px;
-    border: none;
-    background-color: blue;
-    color: white;
-    font-size: 15px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* margin: 4px, 4px; */
+    /* padding: 4px; */
+    text-align: justify;
 }
 
-@media only screen and (max-width: 870px){
-    .all .container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .container .card-1 .photo{
-        width: 100%;
-        padding: 20px;
-    }
-    .card-1 .photo img{
-        width: 100%;
-        border-radius: 20px;
-        padding: 0;
-    }
-    .container .card-2{
-        text-align: center;
-        padding: 0;
-    }
-    .boxx .box{
-        margin: 20px;
-    }
-    .box .desc-1 h3{
-        margin: 0;
-        padding: 0;
-    }
-    .button{
-        display: flex;
-        padding-bottom: 20px;
-    }
-    .click{
-        justify-content: space-evenly;
-    }
-    .click .chat{
-        padding: 20px 100px;
-        font-size: 15px;
-    }
-    .click .follow{
-        padding: 20px 100px;
-    }
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
-@media only screen and (max-width: 600px){
-    .click .chat{
-        padding: 20px 80px;
-        font-size: 15px;
-    }
-    .click .follow{
-        padding: 20px 80px;
-        font-size: 15px;
-    }
+
+.card 
+{
+	position: relative;
+	width: 34vw;
+	height: 40vh;
+	background: #0000;
+	display: flex;
+	box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+    margin: 1rem;
 }
-@media only screen and (max-width: 500px){
-    .click .chat{
-        padding: 20px 60px;
-        font-size: 15px;
-    }
-    .click .follow{
-        padding: 20px 60px;
-        font-size: 15px;
-    }
+
+.card .imgBx 
+{
+	position: relative;
+	/* min-width: 300px; */
+    width:35%;
+	height: 100%;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
 }
-@media only screen and (max-width: 400px){
-    .click .chat{
-        padding: 15px 50px;
-        font-size: 15px;
-    }
-    .click .follow{
-        padding: 15px 50px;
-        font-size: 15px;
-    }
-    .boxx .box{
-        display: flex;
-        justify-content: space-between;
-    }
-    .box .desc-1 h1{
-        font-size: 30px;
-    }
+ .imgBx  img 
+{
+	width:100%;
+    height:100%;
+	transition: 0.5s ease-in-out;
 }
-@media only screen and (max-width: 375px){
-    .click .chat{
-        padding: 15px 40px;
-        font-size: 15px;
-    }
-    .click .follow{
-        padding: 15px 40px;
-        font-size: 15px;
-    }
-    .boxx .box{
-        display: flex;
-        justify-content: space-between;
-    }
-    .box .desc-1 h1{
-        font-size: 25px;
-    }
-    .box .desc-1 h3{
-        font-size: 15px;
-    }
-    .button{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+
+.card .details 
+{  
+    position: absolute;
+	left: 35%;
+	width: 100%;
+	height: 80%;
+	background: #4ba9e9;
+	display: flex;
+	justify-content: center;
+	/* padding: 20px; */
+	flex-direction: column;
+	transition: 0.5s ease-in-out;
+}
+
+.card .details::before 
+{
+	content: '';
+	position: absolute;
+	left: 35%px;
+	width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+	z-index: 1;
+}
+.card .details h3 
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+.card .details h3 span 
+{
+	font-size: 0.65em;
+	font-weight: 300;
+	opacity: 0.85;
+	text-transform: none;
+}
+.card .details h4 
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.9em;
+	line-height: 1em;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+p 
+{
+	color: #fff;
+	font-size: 0.8em;
+	opacity: 0.85;
+}
+.size 
+{
+	display: flex;
+	gap: 10px;
+}
+.size li 
+{
+	list-style: none;
+	color: #fff;
+	font-size: 0.9em;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #fff;
+	cursor: pointer;
+	font-weight: 500;
+	opacity: 0.5;
+}
+.size li:hover 
+{
+	background: #fff;
+	color: #4ba9e9;
+	opacity: 1;
+}
+.group 
+{
+	position: relative;
+	display: flex;
+    gap:10px;
+	/* justify-content: space-between; */
+	margin-top: 20px;
+	align-items: center;
+}
+.card .details h2 
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 2em;
+}
+.card .details h2 sup 
+{
+	font-weight: 300;
+}
+.card .details h2 small 
+{
+	font-size: 0.75em;
+}
+.card .details a 
+{
+	display: inline-flex;
+	padding: 10px 25px;
+	background: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #4ba9e9;
 }
