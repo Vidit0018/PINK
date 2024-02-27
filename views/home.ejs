@@ -29,46 +29,88 @@
                     <p>"Join the Pink Powerhouse: Where<br> Awareness Meets Action in the Fight<br> Against
                         Breast Cancer!"</p>
                     <button>Know More</button> 
-                    <button><a href="/editprofile/<%=user._id%>">Edit profile</a></button>   
+                    <button class="edit-profile-btn"><a href="/editprofile/<%=user._id%>">Edit profile</a></button>   
                 </div>
             </div>
 
             <div class="features">
+
+                <a href="/appointment">
                 <div>
-                    <a href="/appointment"><img src="images\withbg\Image-4.jpg" alt=""></a>
+                    <img src="images\withbg\Image-4.jpg" alt="">
                     <p>APPOINTMENT</p>
                 </div>
+                </a>
+
+                <a href="/donation">
                 <div>
-                    <a href="#"><img src="images\withbg\Image-4.jpg" alt=""></a>
+                    <img src="images\withbg\Image-4.jpg" alt="">
+                    <p>Donation</p>
+                </div>
+                </a>
+
+                <a href="/volunteer">
+                <div>
+                    <img src="images\withbg\Image-4.jpg" alt="">
+                    <p>Volunteer </p>
+                </div>
+                </a>
+
+                <a href="#">
+                <div>
+                    <img src="images\withbg\Image-4.jpg" alt="">
                     <p>VIDITEY</p>
                 </div>
+                </a>
+
+                <a href="#">
                 <div>
-                    <a href="#"><img src="images\withbg\Image-4.jpg" alt=""></a>
+                    <img src="images\withbg\Image-4.jpg" alt="">
                     <p>VIDITEY</p>
                 </div>
+                </a>
+                
+                <a href="#">
                 <div>
-                    <a href="#"><img src="images\withbg\Image-4.jpg" alt=""></a>
+                    <img src="images\withbg\Image-4.jpg" alt="">
                     <p>VIDITEY</p>
                 </div>
+                </a>
+                
+                <a href="#">
                 <div>
-                    <a href="#"><img src="images\withbg\Image-4.jpg" alt=""></a>
+                    <img src="images\withbg\Image-4.jpg" alt="">
                     <p>VIDITEY</p>
                 </div>
+                </a>
+                
+                <a href="#">
                 <div>
-                    <a href="#"><img src="images\withbg\Image-4.jpg" alt=""></a>
+                    <img src="images\withbg\Image-4.jpg" alt="">
                     <p>VIDITEY</p>
                 </div>
-                <div>
-                    <a href="#"><img src="images\withbg\Image-4.jpg" alt=""></a>
-                    <p>VIDITEY</p>
-                </div>
-                <div>
-                    <a href="#"><img src="images\withbg\Image-4.jpg" alt=""></a>
-                    <p>VIDITEY</p>
-                </div>
+                </a>
+
+            </div>
+
+            <div class="news" id="new-container">
+
             </div>
         </div>
     </div>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">Gautam 02/11/2003</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, sunt! Cupiditate architecto veniam adipisci dignissimos a excepturi distinctio quisquam? Explicabo?</p>
+            </div>
+        </div>
+    </template>
 
     <script src="/js/navbar.js"></script>
 </body>

@@ -11,7 +11,10 @@
   background-color: #f0addd;
   color:white;
 }
-
+.edit-profile-btn a{
+  color: white;
+  text-decoration: none;
+}
 body{
     background:#FF407D ;
     height:2000px;
@@ -98,7 +101,6 @@ body{
 /* Home page featured button */
 
 .features{
-  color:var(--first-color);
   width:100%;
   font-weight:700;
   margin-left:2rem;
@@ -109,6 +111,11 @@ body{
   row-gap: 1rem;;
 }
 
+.features a{
+  text-decoration: none;
+  color:var(--first-color);
+}
+
 .features div{
   aspect-ratio:1/1;
   height:15rem;
@@ -116,6 +123,14 @@ body{
   background-color:aliceblue;
   border-radius:10rem;
   border:1.5px solid black;
+  box-shadow: inset 0px 0px 40px 40px pink;
+  transition :all 0.22s ease-in;
+}
+
+.features div:hover{
+  transform:scale(1.1);
+  box-shadow: inset 0px 0px 40px 40px var(--button-color);
+  border:1.5px solid var(--first-color)
 }
 
 .features img{
@@ -126,10 +141,4 @@ body{
   border-radius:50%;
   margin-bottom:3px;
   margin-top:4px;
-  transition:all 0.22s ease-in;
-}
-
-.features img:hover{
-  transform:scale(1.10) translateY(-3px);
-  border:4px solid var(--button-color);
 }

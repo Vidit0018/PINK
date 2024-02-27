@@ -49,6 +49,7 @@ body{
     font-family: "Poppins:ital",sans-serif;
     background-color: #ff9bd2;
 	width: 65%;
+    min-width: 600px;
 	height: 78px;
 	border-radius: 10px;
   text-align: center;

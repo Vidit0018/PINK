@@ -145,9 +145,13 @@ const appointment = async(req,res)=>{
 const bookAppointment = async(req,res)=>{
     res.render("book-appointment.ejs")
 }
+const medicines = async(req,res)=>{
+    res.render("medicines.ejs")
+}
 //   Router.put("/")
 module.exports ={
     login,home,contact,editprofile,signup_post,login_post,
     volunteer,donation,donation_form,
-    appointment,bookAppointment,updateid
+    appointment,bookAppointment,updateid,
+    medicines
 };
