@@ -1,6 +1,9 @@
 const User=require("../config/models/userschema");
+const express = require('express');
+const app = express();
+
+
 const bcrypt=require("bcryptjs");
-const fileUpload=require("express-fileupload");
 const cloudinary=require("cloudinary").v2;
 cloudinary.config({ 
   cloud_name: 'diukjw38i', 
@@ -56,7 +59,7 @@ const signup_post=async(req,res)=>{
                     // Check if the passwords match
                     if (isMatch) {
                       console.log({Password,Username});
-                        res.send("you successfully signin");
+                     res.render("home.ejs",{user});   
                     } else {
                         res.status(401).send("Invalid Username and password");
                     }
@@ -65,8 +68,67 @@ const signup_post=async(req,res)=>{
                     res.status(500).send("Internal Server Error");
                 }
             }
-const userprofile=async(req,res)=>{
-    res.render("userprofile.ejs");
+const editprofile=async(req,res)=>{
+    try {
+        let { id } = req.params;
+        console.log(id);
+        let editdata = await User.findById(id);
+    
+        if (!editdata) {
+          return res.status(404).send('User not found'); // Handle if user is not found
+         }
+    
+         res.render("userprofile.ejs", { editdata });
+           } catch (error) {
+         console.error(error);
+         res.status(500).send('Internal Server Error');
+       }
+}
+// editprofileId-------------------------->update krne ka code
+updateid=async(req,res,next)=>{
+    try {
+        const { id } = req.params;
+        console.log(req.files);
+        const imagepath1 = req.files.path;
+  
+        // Upload image to Cloudinary
+        cloudinary.uploader.upload(imagepath1.tempFilePath, async (err, result) => {
+            if (err) {
+                console.error("Error uploading image to Cloudinary:", err);
+                return res.status(500).send("Failed to upload image to Cloudinary");
+            }
+            console.log("Image uploaded to Cloudinary:", result);
+            
+            // Assuming you get the sport from the request body
+             try {
+                // Update user data with Cloudinary image URL
+                   const updatedData = {
+                    // Birthday: req.body.Birthday,
+                    // Detail: req.body.Detail,
+                    // Contact: req.body.Contact,
+                    // Location: req.body.Location,
+                     Image1: result.url,
+                };
+  
+                // Update user profile in MongoDB
+                const user = await User.findByIdAndUpdate(id, updatedData, { new: true });
+                if (!user) {
+                    return res.status(404).send("User not found");
+                }
+  
+                console.log("User profile updated successfully:", user);
+                // Redirect to user page with updated user data
+                res.render("home.ejs");
+                
+            } catch (error) {
+                console.error("Error updating user profile:", error);
+                res.status(500).send("Failed to update user profile");
+            }
+        });
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).send("Internal Server Error");
+    }
 }
 
 const volunteer = async(req,res)=>{
@@ -86,7 +148,7 @@ const bookAppointment = async(req,res)=>{
 }
 //   Router.put("/")
 module.exports ={
-    login,home,contact,userprofile,signup_post,login_post,
-    volunteer,fileUpload,donation,donation_form,
-    appointment,bookAppointment
+    login,home,contact,editprofile,signup_post,login_post,
+    volunteer,donation,donation_form,
+    appointment,bookAppointment,updateid
 };
