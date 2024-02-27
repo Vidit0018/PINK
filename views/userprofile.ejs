@@ -51,24 +51,24 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label class="form-label">Username</label>
-                                    <input type="text" class="form-control mb-1" value="nmaxwell">
+                                    <input type="text" class="form-control mb-1" value="<%=editdata.Username%>" name="">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" value="Nelle Maxwell">
+                                    <input type="text" class="form-control" value="<%=editdata.Username%>" name="">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">E-mail</label>
-                                    <input type="text" class="form-control mb-1" value="nmaxwell@mail.com">
+                                    <input type="text" class="form-control mb-1" value="<%=editdata.Username%>" required>
                                     
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Company</label>
-                                    <input type="text" class="form-control" value="Company Ltd.">
+                                    <label class="form-label">Age</label>
+                                    <input type="number" class="form-control" value="" name="Age" required>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="account-change-password">
+                        <!-- <div class="tab-pane fade" id="account-change-password">
                             <div class="card-body pb-2">
                                 <div class="form-group">
                                     <label class="form-label">Current password</label>
@@ -83,26 +83,34 @@
                                     <input type="password" class="form-control">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="tab-pane fade" id="account-info">
                             <div class="card-body pb-2">
                                 <div class="form-group">
-                                    <label class="form-label">Bio</label>
+                                    <label class="form-label">About you</label>
                                     <textarea class="form-control"
-                                        rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                                        rows="5">Tell us About you...</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Birthday</label>
-                                    <input type="text" class="form-control" value="May 3, 1995">
+                                    <input type="date" class="form-control" value="May 3, 1995" name="Birthday" required>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Country</label>
-                                    <select class="custom-select">
-                                        <option>USA</option>
-                                        <option selected>Canada</option>
-                                        <option>UK</option>
-                                        <option>Germany</option>
-                                        <option>France</option>
+                                    <label class="form-label">Address</label>
+                                    <input type="text" class="form-control" value="Enter your Address here!"  name="Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Pin code</label>
+                                    <input type="number" class="form-control" value="Ex-110041" name="Pincode" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">City</label>
+                                    <select class="custom-select" name="City" required>
+                                        <option>Delhi</option>
+                                        <option selected>Mumbai</option>
+                                        <option>Kolkata</option>
+                                        <option>Chennai</option>
+                                        <option>Hyderabad</option>
                                     </select>
                                 </div>
                             </div>
@@ -111,7 +119,7 @@
                                 <h6 class="mb-4">Contacts</h6>
                                 <div class="form-group">
                                     <label class="form-label">Phone</label>
-                                    <input type="text" class="form-control" value="+0 (123) 456 7891">
+                                    <input type="number" class="form-control" name="Phone" value="+91-0000." required>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Website</label>

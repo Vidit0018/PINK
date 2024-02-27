@@ -1,8 +1,8 @@
 const User=require("../config/models/userschema");
+const Volunteer=require("../config/models/Volunteerschema");
+const Doctor=require("../config/models/Doctorschema");
 const express = require('express');
 const app = express();
-
-
 const bcrypt=require("bcryptjs");
 const cloudinary=require("cloudinary").v2;
 cloudinary.config({ 

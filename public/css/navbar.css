@@ -101,7 +101,7 @@ nav{
 .affix {
     padding: 0;
     /* background-color: var(--first-color-dark); */
-    backdrop-filter: blur(150px);
+    backdrop-filter: blur(250px);
     height:80px;
     box-shadow:0 0 4px 2px lightpink;
 }
