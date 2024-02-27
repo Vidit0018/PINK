@@ -5,6 +5,7 @@
     --first-color-light: #A49EAC;
     --first-color-lighten: #F2F2F2;
     --lightbg: #ff9bd2;
+    --primary-font:"Poppins:ital",sans-serif;
 }
 .login-button{
     font-family: "Poppins:ital",sans-serif;
