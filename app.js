@@ -20,11 +20,7 @@ app.set("view engine", "ejs");
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"/public")));
 const page_routes = require ("./server/routes/index")
-// const fileUpload=require("express-fileupload");
-app.use("/", page_routes);
-// app.use(fileUpload({
-//   useTempFiles:true
-// }));
+app.use("/",page_routes);
 app.listen(port, () => {
   console.log(`Server running on ${port}`);
 });

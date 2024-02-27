@@ -85,7 +85,7 @@ const editprofile=async(req,res)=>{
        }
 }
 // editprofileId-------------------------->update krne ka code
-updateid=async(req,res,next)=>{
+ const updateid=async(req,res,next)=>{
     try {
         const { id } = req.params;
         console.log(req.files);
@@ -118,7 +118,7 @@ updateid=async(req,res,next)=>{
   
                 console.log("User profile updated successfully:", user);
                 // Redirect to user page with updated user data
-                res.render("home.ejs");
+                res.render("home.ejs",{user});
                 
             } catch (error) {
                 console.error("Error updating user profile:", error);
