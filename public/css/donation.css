@@ -174,3 +174,26 @@ body .progress-bg div {
     from { width: 0%; }
     to { width: 50%; }
 }
+body {
+	background: linear-gradient(-45deg, #ee7752,  #ff9bd2 ,#DA0C81);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.sideimg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
