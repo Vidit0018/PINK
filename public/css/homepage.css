@@ -101,7 +101,6 @@ body{
 /* Home page featured button */
 
 .features{
-  color:var(--first-color);
   width:100%;
   font-weight:700;
   margin-left:2rem;
@@ -110,6 +109,11 @@ body{
   grid-template-rows: 1fr 1fr;
   height:30rem;
   row-gap: 1rem;;
+}
+
+.features a{
+  text-decoration: none;
+  color:var(--first-color);
 }
 
 .features div{
