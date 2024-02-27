@@ -1,6 +1,5 @@
 const mongoose=require("mongoose");
-const bcrypt=require("bcryptjs");
-const womeninfo=new mongoose.Schema({
+const Doctorinfo=new mongoose.Schema({
     Username:{
         type:String,
     
@@ -40,18 +39,6 @@ const womeninfo=new mongoose.Schema({
         type:String,
     },
 });
-womeninfo.pre("save",async function(next){
-    if(this.isModified('Password')){
-        try{
-        this.Password= await bcrypt.hash(this.Password,12);    
-    }
-    catch(e){
-         console.log("error hashing password",e);
-    }
-}
-    next();
-})
+const Doctor=new mongoose.model("Doctor",Doctorinfo);
+module.exports=Doctor;
 
-const User=new mongoose.model("User",womeninfo);
-
-module.exports=User;
