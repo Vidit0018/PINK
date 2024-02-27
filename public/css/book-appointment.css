@@ -23,7 +23,7 @@ body{
 .well {
     width: 100%;
     padding: 3rem;
-    border: solid 2px var(--first-color);
+    border: solid 2px  var(--first-color);
     background-color :var(--first-color);
     border-radius: 5%;
     content:"";
