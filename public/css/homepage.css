@@ -11,7 +11,10 @@
   background-color: #f0addd;
   color:white;
 }
-
+.edit-profile-btn a{
+  color: white;
+  text-decoration: none;
+}
 body{
     background:#FF407D ;
     height:2000px;
