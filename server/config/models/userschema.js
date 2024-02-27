@@ -15,9 +15,7 @@ const womeninfo=new mongoose.Schema({
     Phone:{
         type:Number,
     },
-    Location: {
-        type:String,
-    },
+   
     Birthday:{
         type:String,
     },

@@ -1,0 +1,185 @@
+ const samplelisting=[
+  {
+    name: "Dr. Rajesh Kumar",
+    specialization: "Oncosurgeon",
+    hospital: "AIIMS",
+    location: "Delhi",
+    contact: 9876543211,
+    experience: 10,
+    rating: 4.8,
+    availability: ["Monday", "Wednesday", "Friday"],
+    consultation_fee: "1200",
+    verified: true
+  },
+  {
+    name: "Dr. Priya Singh",
+    specialization: "Oncologist",
+    hospital: "Max Hospital",
+    location: "Noida",
+    contact: 9876543212,
+    experience: 12,
+    rating: 4.2,
+    availability: ["Tuesday", "Thursday", "Saturday"],
+    consultation_fee: "1500",
+    verified: false
+  },
+  {
+    name: "Dr. Anil Sharma",
+    specialization: "Oncologist",
+    hospital: "Fortis Hospital",
+    location: "Faridabad",
+    contact: 9876543213,
+    experience: 15,
+    rating: 4.3,
+    availability: ["Monday", "Tuesday", "Wednesday"],
+    consultation_fee: "1800",
+    verified: true
+  },
+  {
+    name: "Dr. Rahul Verma",
+    specialization: "Radiation Oncologist",
+    hospital: "Artemis Hospital",
+    location: "Gurugram",
+    contact: 9876543214,
+    experience: 11,
+    rating: 4.6,
+    availability: ["Thursday", "Friday", "Saturday"],
+    consultation_fee: "2000",
+    verified: false
+  },
+  {
+    name: "Dr. Sneha Gupta",
+    specialization: "Oncologist",
+    hospital: "Medanta Hospital",
+    location: "Gurugram",
+    contact: 9876543215,
+    experience: 14,
+    rating: 4.5,
+    availability: ["Monday", "Wednesday", "Friday"],
+    consultation_fee: "1700",
+    verified: true
+  },
+  {
+    name: "Dr. Akash Verma",
+    specialization: "Oncosurgeon",
+    hospital: "Fortis Hospital",
+    location: "Delhi",
+    contact: 9876543216,
+    experience: 13,
+    rating: 4.7,
+    availability: ["Tuesday", "Thursday", "Saturday"],
+    consultation_fee: "1900",
+    verified: false
+  },
+  {
+    name: "Dr. Ritu Malhotra",
+    specialization: "Oncologist",
+    hospital: "Apollo Hospital",
+    location: "Noida",
+    contact: 9876543217,
+    experience: 12,
+    rating: 4.1,
+    availability: ["Monday", "Tuesday", "Wednesday"],
+    consultation_fee: "1600",
+    verified: true
+  },
+  {
+    name: "Dr. Amit Sharma",
+    specialization: "Radiation Oncologist",
+    hospital: "AIIMS",
+    location: "Faridabad",
+    contact: 9876543218,
+    experience: 11,
+    rating: 4.4,
+    availability: ["Thursday", "Friday", "Saturday"],
+    consultation_fee: "2000",
+    verified: false
+  },
+  {
+    name: "Dr. Sunita Singh",
+    specialization: "Oncologist",
+    hospital: "Max Hospital",
+    location: "Gurugram",
+    contact: 9876543219,
+    experience: 10,
+    rating: 4.3,
+    availability: ["Monday", "Wednesday", "Friday"],
+    consultation_fee: "1500",
+    verified: true
+  },
+  {
+    name: "Dr. Arjun Kapoor",
+    specialization: "Oncosurgeon",
+    hospital: "Apollo Hospital",
+    location: "Noida",
+    contact: 9876543220,
+    experience: 11,
+    rating: 4.6,
+    availability: ["Tuesday", "Thursday", "Saturday"],
+    consultation_fee: "1800",
+    verified: false
+  },
+  {
+    name: "Dr. Nisha Verma",
+    specialization: "Oncologist",
+    hospital: "Fortis Hospital",
+    location: "Delhi",
+    contact: 9876543221,
+    experience: 14,
+    rating: 4.2,
+    availability: ["Monday", "Tuesday", "Wednesday"],
+    consultation_fee: "1700",
+    verified: true
+  },
+  {
+    name: "Dr. Anuj Singh",
+    specialization: "Radiation Oncologist",
+    hospital: "AIIMS",
+    location: "Gurugram",
+    contact: 9876543222,
+    experience: 12,
+    rating: 4.5,
+    availability: ["Thursday", "Friday", "Saturday"],
+    consultation_fee: "1900",
+    verified: false
+  },
+  {
+    name: "Dr. Preeti Sharma",
+    specialization: "Oncologist",
+    hospital: "Medanta Hospital",
+    location: "Delhi",
+    contact: 9876543223,
+    experience: 15,
+    rating: 4.7,
+    availability: ["Monday", "Wednesday", "Friday"],
+    consultation_fee: "2000",
+    verified: true
+  },
+  {
+    name: "Dr. Vineet Malhotra",
+    specialization: "Oncosurgeon",
+    hospital: "Max Hospital",
+    location: "Noida",
+    contact: 9876543224,
+    experience: 13,
+    rating: 4.8,
+    availability: ["Tuesday", "Thursday", "Saturday"],
+    consultation_fee: "2200",
+    verified: false
+  },
+  {
+    name: "Dr. Ritu Singh",
+    specialization: "Radiation Oncologist",
+    hospital: "Apollo Hospital",
+    location: "Gurugram",
+    contact: 9876543225,
+    experience: 14,
+    rating: 4.9,
+    availability: ["Monday", "Tuesday", "Wednesday"],
+    consultation_fee: "1900",
+    verified: true
+  }
+]
+
+  module.exports={data:samplelisting};
+  
