@@ -116,6 +116,14 @@ body{
   background-color:aliceblue;
   border-radius:10rem;
   border:1.5px solid black;
+  box-shadow: inset 0px 0px 40px 40px pink;
+  transition :all 0.22s ease-in;
+}
+
+.features div:hover{
+  transform:scale(1.1);
+  box-shadow: inset 0px 0px 40px 40px var(--button-color);
+  border:1.5px solid var(--first-color)
 }
 
 .features img{
@@ -126,10 +134,4 @@ body{
   border-radius:50%;
   margin-bottom:3px;
   margin-top:4px;
-  transition:all 0.22s ease-in;
-}
-
-.features img:hover{
-  transform:scale(1.10) translateY(-3px);
-  border:4px solid var(--button-color);
 }
