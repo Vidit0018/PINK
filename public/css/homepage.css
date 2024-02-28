@@ -28,12 +28,14 @@ body{
 .main{
   display:flex;
   flex-direction: column;
+  justify-content: space-evenly;
   width:100%;
 }
 
 .home{
   display:flex;
   width:100%;
+  justify-content: space-between;
 }
 
 .left{
@@ -104,11 +106,14 @@ body{
   width:100%;
   font-weight:700;
   margin-left:2rem;
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 4rem;;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
   height:30rem;
-  row-gap: 1rem;;
+  /* row-gap: 1rem;; */
 }
 
 .features a{
@@ -116,9 +121,13 @@ body{
   color:var(--first-color);
 }
 
+.feature-type{
+  font-size:25px;
+}
+
 .features div{
   aspect-ratio:1/1;
-  height:15rem;
+  height:17rem;
   text-align:center;
   background-color:aliceblue;
   border-radius:10rem;
@@ -129,8 +138,8 @@ body{
 
 .features div:hover{
   transform:scale(1.1);
-  box-shadow: inset 0px 0px 40px 40px var(--button-color);
-  border:1.5px solid var(--first-color)
+  box-shadow: inset 0px 0px 40px 40px #f779a1;
+  border:1.5px solid var(--first-color);
 }
 
 .features img{
@@ -140,17 +149,27 @@ body{
   overflow:hidden;
   border-radius:50%;
   margin-bottom:3px;
-  margin-top:4px;
+  margin-top:1.5rem;
 }
+
+.feature-desc{
+  font-size:15px;
+  transform: translateY(-15px);
+}
+
+
+/* NEWS SECTION */
 
 .news{
   width:90vw;
   height:200vh;
   margin-bottom:3rem;
   overflow-y: scroll;;
-  margin-left:3.8rem;
-  margin-right:5.2rem;
-  margin-top:9rem;
+  /* margin-left:5rem;
+  margin-right:3.2rem; */
+  margin-inline:auto;
+  margin-left:6rem;
+  margin-top:20rem;
   border-radius:2rem;
   background-color:pink;
   display:flex;
@@ -162,7 +181,7 @@ body{
   align-items:start;
 }
 
-.card{
+.news-card{
   width:25vw;
   /* min-height:300px; */
   background-color: #f36994;
@@ -174,7 +193,7 @@ body{
   transition: all 0.3s ease-in;
 }
 
-.card:hover{
+.news-card:hover{
   box-shadow:1px 1px 8px #d4ecff;
   background-color: var(--first-color);
   transform:translateY(-4px);
@@ -215,4 +234,145 @@ body{
 
 .news::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+.profile-display{
+  display:flex;
+  justify-content: center;
+  width:100vw;
+  height:40vw;
+  margin-top:8rem;
+  padding-top:2rem;
+  color:pink;
+}
+
+.user-card-full {
+  overflow: hidden;
+}
+
+.card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+  box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+  border: none;
+  margin-bottom: 30px;
+  width:50vw;;
+  box-shadow: outset 0px 0px 40px 40px white;
+}
+
+.m-r-0 {
+  margin-right: 0px;
+}
+
+.m-l-0 {
+  margin-left: 0px;
+}
+
+.user-card-full .user-profile {
+  border-radius: 5px 0 0 5px;
+}
+
+.bg-c-lite-green {
+      background: -webkit-gradient(linear, left top, right top, from(#f36994), to(pink));
+  background: linear-gradient(to right, pink, #f36994);
+}
+
+.user-profile {
+  padding: 20px 0;
+}
+
+.card-block {
+  padding: 1.25rem;
+}
+
+.m-b-25 {
+  margin-bottom: 25px;
+}
+
+.img-radius {
+  border-radius: 5px;
+}
+
+
+
+h6 {
+  font-size: 14px;
+}
+
+.card .card-block p {
+  line-height: 25px;
+}
+
+@media only screen and (min-width: 1400px){
+p {
+  font-size: 14px;
+}
+}
+
+.card-block {
+  padding: 1.25rem;
+}
+
+.b-b-default {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.p-b-5 {
+  padding-bottom: 5px !important;
+}
+
+.card .card-block p {
+  line-height: 25px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.text-muted {
+  color: #919aa3 !important;
+}
+
+.b-b-default {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.f-w-600 {
+  font-weight: 600;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.m-t-40 {
+  margin-top: 20px;
+}
+
+.p-b-5 {
+  padding-bottom: 5px !important;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-t-40 {
+  margin-top: 20px;
+}
+
+.user-card-full .social-link li {
+  display: inline-block;
+}
+
+.user-card-full .social-link li a {
+  font-size: 20px;
+  margin: 0 10px 0 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
