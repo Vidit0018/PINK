@@ -1,5 +1,6 @@
 body{
 	background: yellow;
+	/* width:100vw; */
 }
 .wrapper{
 	width: 100vw;
@@ -20,7 +21,7 @@ body{
 	display:flex;
 	justify-content:space-evenly;
 	flex-wrap: wrap;
-	overflow: scroll;
+	overflow-y: scroll;
 	
 	padding: 20px;
 }
