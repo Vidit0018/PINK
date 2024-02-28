@@ -143,7 +143,6 @@ const donation_form = async(req,res)=>{
 }
 const appointment = async(req,res)=>{
     const  Doctorlisting=  await Doctor.find({})
-     console.log(Doctorlisting);
     res.render("appointment.ejs",{Doctorlisting});
 }
 const bookAppointment = async(req,res)=>{
