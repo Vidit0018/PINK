@@ -18,7 +18,7 @@ body{
 	height: 100%;
 	background: orange;
 	display:flex;
-	justify-content: flex-start;
+	justify-content:space-evenly;
 	flex-wrap: wrap;
 	overflow: scroll;
 	
@@ -46,7 +46,7 @@ p {
 	color: #B3B8CD;
 	padding-top: 30px;
 	position: relative;
-	width: 22rem;
+	width: 21rem;
 	height: 30rem;
 	max-width: 100%;
 	text-align: center;
