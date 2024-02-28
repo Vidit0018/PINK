@@ -5,8 +5,20 @@
 <body>
   <div class="wrapper">
 
-    
+    <% for(let list of Medicinelisting){ %>
     <div class="card" >
+      <img src="\images\drug.png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title"><%=list.name%></h5>
+        <p class="card-text">
+          <%=list.description%>
+        </p>
+        <a href="#" class="btn btn-primary">Buy Now</a>
+        <button class="btn btn-warning rounded-pill px-3 price" type="button">&#8377;<%=list.price%></button>
+      </div>
+    </div>
+    <%}%>
+    <!-- <div class="card" >
       <img src="\images\drug.png" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Tamoxifen</h5>
@@ -77,19 +89,7 @@
         <a href="#" class="btn btn-primary">Buy Now</a>
         <button class="btn btn-warning rounded-pill px-3 price" type="button">$100</button>
       </div>
-    </div>
-    <div class="card" >
-      <img src="\images\drug.png" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Tamoxifen</h5>
-        <p class="card-text">
-          Tamoxifen: A selective estrogen receptor modulator used in the
-          treatment and prevention of hormone receptor-positive breast cancer. .
-        </p>
-        <a href="#" class="btn btn-primary">Buy Now</a>
-        <button class="btn btn-warning rounded-pill px-3 price" type="button">$100</button>
-      </div>
-    </div>
+    </div> -->
 
 <!-- ///////////////////////////////////// FOOTER/////////////////////////// -->
     

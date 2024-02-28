@@ -12,7 +12,7 @@
         <div class="right">
             <% for(let list of Doctorlisting){ %>
             <div class="card-container">
-                <span class="pro">PRO</span>
+                <span class="pro">Verified</span>
                 <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
                 <h3><%=list.name %></h3>
                 <h6><%=list.specialization %></h6>
@@ -24,20 +24,21 @@
                     </button>
                     </a>
                     <button class="primary ghost">
-                        Pokemon
+                        Contact
                     </button>
                 </div>
                 <div class="skills">
                     <h6><%=list.rating%></h6>
                     <ul>
-                        <li>Experience :<%=list.experience%></li>
+                        <li>Experience :<%=list.experience%> yrs</li>
                         <li>Availability : <%=list.availability %></li>
-                        <li>Consultation Fee : <%=list.consultaion_fee%></li>
+                        <li>Consultation Fee : ₹ <%=list.consultation_fee %></li>
                         
                     </ul>
                 </div>
-                <%}%>
+                
             </div>
+            <%}%>
             
         
         

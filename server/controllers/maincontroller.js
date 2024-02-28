@@ -1,6 +1,7 @@
-const User = require("../config/models/userschema");
-const Volunteer = require("../config/models/Volunteerschema");
-const Doctor = require("../config/models/Doctorschema");
+const User=require("../config/models/userschema");
+const Volunteer=require("../config/models/Volunteerschema");
+const Medicine=require("../config/models/Medicineschema.js");
+const Doctor=require("../config/models/Doctorschema");
 const express = require('express');
 const { PythonShell } = require('python-shell');
 const app = express();
@@ -150,8 +151,10 @@ const appointment = async (req, res) => {
 const bookAppointment = async (req, res) => {
     res.render("book-appointment.ejs")
 }
-const medicines = async (req, res) => {
-    res.render("medicines.ejs")
+const medicines = async(req,res)=>{
+    const  Medicinelisting=  await Medicine.find({})
+    console.log(Medicinelisting);
+   res.render("medicines.ejs",{Medicinelisting});
 }
 
 const nearest = async (req, res) => {
