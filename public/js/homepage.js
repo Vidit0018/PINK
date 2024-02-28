@@ -2,7 +2,7 @@ const API_KEY = "aad850529a4540ceb99d4ce95436ad1d";
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => {
-    fetchNews("Breast Cancer");
+    fetchNews("Breast");
 });
 
 function reload(){
