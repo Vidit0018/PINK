@@ -142,3 +142,77 @@ body{
   margin-bottom:3px;
   margin-top:4px;
 }
+
+.news{
+  width:90vw;
+  height:200vh;
+  margin-bottom:3rem;
+  overflow-y: scroll;;
+  margin-left:3.8rem;
+  margin-right:5.2rem;
+  margin-top:9rem;
+  border-radius:2rem;
+  background-color:pink;
+  display:flex;
+  padding:2.5rem;
+  padding-top:3.7rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap:20px;
+  align-items:start;
+}
+
+.card{
+  width:25vw;
+  /* min-height:300px; */
+  background-color: #f36994;
+  color:white;
+  box-shadow: 0 0 4px var(--first-color-dark);
+  border-radius:1rem;
+  overflow:hidden;
+  margin-bottom:2rem;
+  transition: all 0.3s ease-in;
+}
+
+.card:hover{
+  box-shadow:1px 1px 8px #d4ecff;
+  background-color: var(--first-color);
+  transform:translateY(-4px);
+}
+
+.card-header img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:0.5rem;
+  margin-top:0.5rem;
+}
+
+.card-content{
+  padding:12px;
+}
+
+.news-source{
+  margin-block:12px;
+}
+
+.news::-webkit-scrollbar{
+  height:90%;
+  margin:2rem 0;
+  overflow: hidden;
+  width:10px;
+}
+
+.news::-webkit-scrollbar-track {
+  background: rgb(239, 210, 214);
+  border-radius:10px;
+}
+
+.news::-webkit-scrollbar-thumb {
+  background: #f37aa0;
+  border-radius: 10px;;
+}
+
+.news::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
