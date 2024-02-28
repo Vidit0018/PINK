@@ -1,5 +1,6 @@
 const User=require("../config/models/userschema");
 const Volunteer=require("../config/models/Volunteerschema");
+const Doctor=require("../config/models/Doctorschema");
 const express = require('express');
 const app = express();
 const bcrypt=require("bcryptjs");
@@ -140,7 +141,9 @@ const donation_form = async(req,res)=>{
     res.render("donation_form.ejs")
 }
 const appointment = async(req,res)=>{
-    res.render("appointment.ejs")
+    const  Doctorlisting=  await Doctor.find({})
+     console.log(Doctorlisting);
+    res.render("appointment.ejs",{Doctorlisting});
 }
 const bookAppointment = async(req,res)=>{
     res.render("book-appointment.ejs")

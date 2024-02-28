@@ -10,11 +10,12 @@
        <!-- //////////////////////////// right . -->
        
         <div class="right">
+            <% for(let list of Doctorlisting){ %>
             <div class="card-container">
                 <span class="pro">PRO</span>
                 <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-                <h3>Doctors Name</h3>
-                <h6>Specialisation</h6>
+                <h3><%=list.name %></h3>
+                <h6><%=list.specialization %></h6>
                 <p>AIIMS , Delhi</p>
                 <div class="buttons">
                     <a href="/book-appointment">
@@ -36,6 +37,7 @@
                         
                     </ul>
                 </div>
+                <%}%>
             </div>
             
         
