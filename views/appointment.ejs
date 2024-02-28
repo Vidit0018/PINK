@@ -16,7 +16,7 @@
                 <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
                 <h3><%=list.name %></h3>
                 <h6><%=list.specialization %></h6>
-                <p>AIIMS , Delhi</p>
+                <p><%=list.hospital%> ,<%=list.location%></p>
                 <div class="buttons">
                     <a href="/book-appointment">
                     <button class="primary">
@@ -28,12 +28,11 @@
                     </button>
                 </div>
                 <div class="skills">
-                    <h6>Rating</h6>
+                    <h6><%=list.rating%></h6>
                     <ul>
-                        <li>Experience 10 years</li>
-                        <li>Availability : Mon,Tues,Wed</li>
-                        <li>Type : Oncologist</li>
-                        <li>Consultation Fee : ₹1000</li>
+                        <li>Experience :<%=list.experience%></li>
+                        <li>Availability : <%=list.availability %></li>
+                        <li>Consultation Fee : <%=list.consultaion_fee%></li>
                         
                     </ul>
                 </div>
