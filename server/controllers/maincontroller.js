@@ -1,5 +1,6 @@
 const User=require("../config/models/userschema");
 const Volunteer=require("../config/models/Volunteerschema");
+const Medicine=require("../config/models/Medicineschema.js");
 const Doctor=require("../config/models/Doctorschema");
 const express = require('express');
 const app = express();
@@ -149,7 +150,9 @@ const bookAppointment = async(req,res)=>{
     res.render("book-appointment.ejs")
 }
 const medicines = async(req,res)=>{
-    res.render("medicines.ejs")
+    const  Medicinelisting=  await Medicine.find({})
+    console.log(Medicinelisting);
+   res.render("medicines.ejs",{Medicinelisting});
 }
 //   Router.put("/")
 module.exports ={
