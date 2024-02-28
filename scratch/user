@@ -1,0 +1,7 @@
+{
+  _id: new ObjectId('65daab7340bc7d4e09d7397f'),
+  Username: 'Rajan1',
+  Email: 'Rajan1@gmail.com',
+  Password: '$2a$12$BaEgGjKbp9phVKgS7JoRc.UQ0a9YWZo0VqLeS7sCrAYhi607Cg5r.',
+  __v: 0
+}
