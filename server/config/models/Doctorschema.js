@@ -22,8 +22,9 @@ const Doctorinfo=new mongoose.Schema({
         rating: { 
             type: Number,
          },
-        availability: 
-        [{ type: String }],
+        availability:{
+            type:[String]
+        },
 
         consultation_fee: {
              type: String, 
