@@ -1,43 +1,29 @@
 const mongoose=require("mongoose");
 const Volunteerinfo=new mongoose.Schema({
-    Username:{
+    name:{
         type:String,
     
     },    
-    Email:{
+    date:{
         type:String,
-        unique:true,
+
     },
-    Password:{
-        type:String,
-    },
-    Phone:{
-        type:Number,
-    },
-    Location: {
+    day:{
         type:String,
     },
-    Birthday:{
+    time:{
         type:String,
     },
-    Age:{
-        type:Number,
-    },
-    Name:{
+    location: {
         type:String,
     },
-    Address:{
-        type:Number,
-    },
-    City:{
-        type:String, 
-    },
-    Pincode:{
-        type:Number,
-    },
-    Image1:{
+    city:{
         type:String,
     },
+    type:{
+        type:String,
+    },
+    
 });
 const Volunteer=new mongoose.model("Volunteer",Volunteerinfo);
 module.exports=Volunteer;
