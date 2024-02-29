@@ -1,0 +1,53 @@
+<%layout("/layouts/boilerplate.ejs")%>\
+
+    <head>
+        <link rel="stylesheet" href="\css\nearest.css" />
+    </head>
+
+    <body>
+                    <!-- <p>
+                        <%=message%>
+                    </p> -->
+                    <div class="wrapper">
+                        <section>
+                            <div class="card">
+                                <img src="\images\woman.png" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">ME</h5>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="nearby">
+                            <%for(var i=0;i< JSON.parse(message).length;i++){%>
+                                <div class="card2">
+                                    <div class="mt-1">
+                                        <center> <img src="\images\woman.png" class="card-img-top w-50 rounded-pill" alt="..." /></center>
+                                    </div>
+                                    <div class="card-body flex flex-center">
+                                        <h5 class="card-title mb-3">Name</h5>
+                                        <p><%=Number(Object.values(JSON.parse(message)[i])[1]).toFixed(1)%> km</p>
+                                        <a href="#" class="btn btn-primary rounded-pill w-50">Connect</a>
+                                    </div>
+                                </div>
+                            <%}%>
+                        </section>
+                    </div>
+                    <div class="footer">
+                        <div class="footer-left">
+                            <img class="footer-img img-hover" src="\images\withoutbg\BC-img1.jpg" alt="">
+                        </div>
+                        <div class="footer-right">
+                            <div class="col-md-5 offset-md-1 mb-3">
+                                <form>
+                                    <h1 class="subcription-title">Subscribe for monthly medicines </h1>
+                                    <p>We give you to the ease of uploading the medical prescription , All the medicines
+                                        will be delivered to you timely whithout any hassle.</p>
+                                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                                        <button class="btn btn-primary" type="button">Subscribe-Now</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+    </body>

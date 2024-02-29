@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {login,home,contact,editprofile,signup_post,login_post,volunteer,
     donation,donation_form,appointment,bookAppointment,updateid,
-    medicines
+    medicines,nearest
 } =require("../controllers/maincontroller")
 router.get("/", login);
 router.get("/home", home);
@@ -18,4 +18,6 @@ router.get("/appointment", appointment);
 router.get("/medicines", medicines);
 router.get("/book-appointment", bookAppointment);
 router.put("/editprofile/:id",updateid);
+router.get("/nearest",nearest);
+
 module.exports= router;
