@@ -15,8 +15,8 @@ async function main(){
 const Initdb=async () =>{
     try {
          await Volunteer.deleteMany({});
-        const result = await Volunteer.insertMany(volunteersample.data);
-        console.log("Documents inserted:",result.lngth);
+         const result = await Volunteer.insertMany(volunteersample.data);
+         console.log("Documents inserted:",result.lngth);
         console.log("Message successfully conveyed");
       } catch (error) {
         console.error("Error inserting documents:", error);

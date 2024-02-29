@@ -105,7 +105,7 @@ const updateid = async (req, res, next) => {
             // Assuming you get the sport from the request body
             try {
                 // Update user data with Cloudinary image URL
-<<<<<<< HEAD
+
                    const updatedData = {
                      Birthday: req.body.Birthday,
                      Age: req.body.Age,
@@ -114,14 +114,7 @@ const updateid = async (req, res, next) => {
                      Address:req.body.Address,
                      Pincode:req.body.Pincode,
                      Image1: result.url,
-=======
-                const updatedData = {
-                    // Birthday: req.body.Birthday,
-                    // Detail: req.body.Detail,
-                    // Contact: req.body.Contact,
-                    // Location: req.body.Location,
-                    Image1: result.url,
->>>>>>> 50b63f19e7da09afea3b8913e72ef667d8d08bcc
+                
                 };
 
                 // Update user profile in MongoDB
@@ -146,7 +139,9 @@ const updateid = async (req, res, next) => {
 }
 
 const volunteer = async (req, res) => {
-    res.render("volunteer.ejs");
+    const volunteerlisting = await Volunteer.find({})
+    console.log(volunteerlisting);
+    res.render("volunteer.ejs", { volunteerlisting });
 }
 const donation = async (req, res) => {
     res.render("donation.ejs")

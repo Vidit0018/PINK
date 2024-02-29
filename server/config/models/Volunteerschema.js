@@ -3,7 +3,10 @@ const Volunteerinfo=new mongoose.Schema({
     name:{
         type:String,
     
-    },    
+    }, 
+    description:{
+        type:String,
+    } ,  
     date:{
         type:String,
 
