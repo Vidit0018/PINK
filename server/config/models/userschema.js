@@ -26,7 +26,7 @@ const womeninfo=new mongoose.Schema({
         type:String,
     },
     Address:{
-        type:Number,
+        type:String,
     },
     City:{
         type:String, 

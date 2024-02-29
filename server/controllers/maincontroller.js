@@ -104,10 +104,12 @@ const editprofile=async(req,res)=>{
              try {
                 // Update user data with Cloudinary image URL
                    const updatedData = {
-                    // Birthday: req.body.Birthday,
-                    // Detail: req.body.Detail,
-                    // Contact: req.body.Contact,
-                    // Location: req.body.Location,
+                     Birthday: req.body.Birthday,
+                     Age: req.body.Age,
+                    Phone: req.body.Phone,
+                     City: req.body.City,
+                     Address:req.body.Address,
+                     Pincode:req.body.Pincode,
                      Image1: result.url,
                 };
   
