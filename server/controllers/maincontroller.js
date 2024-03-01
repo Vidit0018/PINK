@@ -163,6 +163,9 @@ const medicines = async(req,res)=>{
     const  Medicinelisting=  await Medicine.find({})
    res.render("medicines.ejs",{Medicinelisting});
 }
+const bookings = async(req,res)=>{
+   res.render("bookings.ejs");
+}
 
 const nearest = async (req, res) => {
     const pythonShell = new PythonShell('server/python/nearest.py',{args:"okokok"});
@@ -205,5 +208,6 @@ module.exports = {
     login, home, contact, editprofile, signup_post, login_post,
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
-    medicines, nearest,booked_appointment
+    medicines, nearest,booked_appointment,
+    bookings
 };
