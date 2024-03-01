@@ -119,6 +119,7 @@ button.primary {
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   padding: 10px 25px;
+  font-weight: bold;
 }
 
 button.primary:hover{
