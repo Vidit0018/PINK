@@ -173,6 +173,7 @@ const nearest = async (req, res) => {
     const pythonShell = new PythonShell('server/python/nearest.py', { args: ownData.Pincode });
     pythonShell.on('message', (message) => {
         res.render("nearest.ejs", { message : message.split("**")[0] , location:message.split("**")[1] });
+        console.log(message);
     });
     pythonShell.end();
 }
