@@ -152,7 +152,6 @@ const donation_form = async (req, res) => {
 }
 const appointment = async (req, res) => {
     const Doctorlisting = await Doctor.find({})
-    console.log(Doctorlisting);
     res.render("appointment.ejs", { Doctorlisting });
 }
 const bookAppointment = async (req, res) => {
@@ -162,7 +161,6 @@ const bookAppointment = async (req, res) => {
 }
 const medicines = async(req,res)=>{
     const  Medicinelisting=  await Medicine.find({})
-    console.log(Medicinelisting);
    res.render("medicines.ejs",{Medicinelisting});
 }
 

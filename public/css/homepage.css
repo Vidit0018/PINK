@@ -6,6 +6,9 @@
   --first-color-dark: #DA0C81;
   --button-color:#C70A6E;
 }
+*{
+  max-width: 100vw;
+}
 
 ::selection{
   background-color: #f0addd;
@@ -105,7 +108,6 @@ body{
 .features{
   width:100%;
   font-weight:700;
-  margin-left:2rem;
   display:flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -168,7 +170,6 @@ body{
   /* margin-left:5rem;
   margin-right:3.2rem; */
   margin-inline:auto;
-  margin-left:6rem;
   margin-top:20rem;
   border-radius:2rem;
   background-color:pink;
@@ -383,7 +384,7 @@ p {
 {
 	position: relative;
 	min-height: 100vh;
-  width:105vw;
+  width:100vw;
 	padding: 50px 100px;
 	display: flex;
 	justify-content: center;
