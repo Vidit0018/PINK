@@ -22,8 +22,8 @@ def find_nearest(target_coordinate):
             result.append(item)
     return result
 
-input_coords = (28.741,77.125)
+location = geolocator.geocode(sys.argv[1])
+input_coords = {location.latitude , location.longitude}
 nearest = find_nearest(input_coords)
-print(json.dumps(nearest))
-print(geolocator.reverse(str(nearest[0][0]['lat'])+","+str(nearest[0][0]['lng'])))
-print(sys.argv[1])
+
+print(json.dumps(nearest),"**", geolocator.reverse(str(nearest[0][0]['lat'])+","+str(nearest[0][0]['lng'])))

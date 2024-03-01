@@ -19,6 +19,6 @@ router.get("/bookings", bookings);
 router.get("/medicines", medicines);
 router.get("/book-appointment/:id", bookAppointment);
 router.put("/editprofile/:id",updateid);
-router.get("/nearest",nearest);
+router.get("/nearest/:id",nearest);
 router.post("/book-appointment/:id/booked",booked_appointment)
 module.exports= router;
