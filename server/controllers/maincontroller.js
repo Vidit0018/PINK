@@ -1,8 +1,8 @@
-const User=require("../config/models/userschema");
-const Volunteer=require("../config/models/Volunteerschema");
-const Medicine=require("../config/models/Medicineschema.js");
-const Doctor=require("../config/models/Doctorschema");
-const Booked=require("../config/models/booked_appointschema.js");
+const User = require("../config/models/userschema");
+const Volunteer = require("../config/models/Volunteerschema");
+const Medicine = require("../config/models/Medicineschema.js");
+const Doctor = require("../config/models/Doctorschema");
+const Booked = require("../config/models/booked_appointschema.js");
 const express = require('express');
 const { PythonShell } = require('python-shell');
 const app = express();
@@ -13,6 +13,7 @@ cloudinary.config({
     api_key: '779135273943798',
     api_secret: 'riHpwxvUAlHEcTNBdotlGuZrXGY'
 });
+
 const login = async (req, res) => {
     res.render("login.ejs");
 }
@@ -22,6 +23,7 @@ const home = async (req, res) => {
 const contact = async (req, res) => {
     res.send("<h1>Contact Page</h1>");
 }
+
 const signup_post = async (req, res) => {
     try {
         const user = new User({
@@ -94,7 +96,6 @@ const updateid = async (req, res, next) => {
         const { id } = req.params;
         console.log(req.files);
         const imagepath1 = req.files.path;
-
         // Upload image to Cloudinary
         cloudinary.uploader.upload(imagepath1.tempFilePath, async (err, result) => {
             if (err) {
@@ -105,17 +106,14 @@ const updateid = async (req, res, next) => {
 
             // Assuming you get the sport from the request body
             try {
-                // Update user data with Cloudinary image URL
-
-                   const updatedData = {
-                     Birthday: req.body.Birthday,
-                     Age: req.body.Age,
+                const updatedData = {
+                    Birthday: req.body.Birthday,
+                    Age: req.body.Age,
                     Phone: req.body.Phone,
-                     City: req.body.City,
-                     Address:req.body.Address,
-                     Pincode:req.body.Pincode,
-                     Image1: result.url,
-                
+                    City: req.body.City,
+                    Address: req.body.Address,
+                    Pincode: req.body.Pincode,
+                    Image1: result.url,
                 };
 
                 // Update user profile in MongoDB
@@ -155,33 +153,35 @@ const appointment = async (req, res) => {
     res.render("appointment.ejs", { Doctorlisting });
 }
 const bookAppointment = async (req, res) => {
-    const {id}=req.params;
-    const doctor=await Doctor.findById(id);
-    res.render("book-appointment.ejs",{doctor})
+    const { id } = req.params;
+    const doctor = await Doctor.findById(id);
+    res.render("book-appointment.ejs", { doctor })
 }
-const medicines = async(req,res)=>{
-    const  Medicinelisting=  await Medicine.find({})
-   res.render("medicines.ejs",{Medicinelisting});
+
+const medicines = async (req, res) => {
+    const Medicinelisting = await Medicine.find({})
+    res.render("medicines.ejs", { Medicinelisting });
 }
 
 const nearest = async (req, res) => {
-    const pythonShell = new PythonShell('server/python/nearest.py',{args:"okokok"});
-
+    let ownData = await User.findById(req.params.id);
+    console.log(ownData.Pincode)
+    const pythonShell = new PythonShell('server/python/nearest.py', { args: ownData.Pincode });
     pythonShell.on('message', (message) => {
-        res.render("nearest.ejs",{message});
+        res.render("nearest.ejs", { message : message.split("**")[0] , location:message.split("**")[1] });
     });
     pythonShell.end();
 }
 //<-------------------------------------------------------------------->
-const booked_appointment=async(req,res)=>{
-    
+const booked_appointment = async (req, res) => {
+
     try {
-        const {id} = req.params;
-        const doctor = await Doctor.findById({_id:id});
+        const { id } = req.params;
+        const doctor = await Doctor.findById({ _id: id });
         if (!doctor) {
             return res.status(404).json({ message: "Doctor not found" });
         }
-        const {Username,UserPhone,Useremail}=req.body;
+        const { Username, UserPhone, Useremail } = req.body;
         const bookedAppointment = new Booked({
             name: doctor.name,
             specialization: doctor.specialization,
@@ -205,5 +205,5 @@ module.exports = {
     login, home, contact, editprofile, signup_post, login_post,
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
-    medicines, nearest,booked_appointment
+    medicines, nearest, booked_appointment
 };

@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const port = 3000;
 const path=require("path");
@@ -12,6 +13,12 @@ app.use(fileUpload({
 const ejs_mate=require("ejs-mate");
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.use(session({
+  secret: 'secret string',
+  resave: false,
+  saveUninitialized: false,
+}));
+
 app.engine("ejs",ejs_mate);
 app.use(express.urlencoded({ extended: true }));
 const methodoverride=require("method-override");
