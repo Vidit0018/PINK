@@ -2,6 +2,7 @@ const User=require("../config/models/userschema");
 const Volunteer=require("../config/models/Volunteerschema");
 const Medicine=require("../config/models/Medicineschema.js");
 const Doctor=require("../config/models/Doctorschema");
+const Booked=require("../config/models/booked_appointschema.js");
 const express = require('express');
 const { PythonShell } = require('python-shell');
 const app = express();
@@ -155,7 +156,9 @@ const appointment = async (req, res) => {
     res.render("appointment.ejs", { Doctorlisting });
 }
 const bookAppointment = async (req, res) => {
-    res.render("book-appointment.ejs")
+    const {id}=req.params;
+    const doctor=await Doctor.findById(id);
+    res.render("book-appointment.ejs",{doctor})
 }
 const medicines = async(req,res)=>{
     const  Medicinelisting=  await Medicine.find({})
@@ -171,10 +174,38 @@ const nearest = async (req, res) => {
     });
     pythonShell.end();
 }
+//<-------------------------------------------------------------------->
+const booked_appointment=async(req,res)=>{
+    
+    try {
+        const {id} = req.params;
+        const doctor = await Doctor.findById({_id:id});
+        if (!doctor) {
+            return res.status(404).json({ message: "Doctor not found" });
+        }
+        const {Username,UserPhone,Useremail}=req.body;
+        const bookedAppointment = new Booked({
+            name: doctor.name,
+            specialization: doctor.specialization,
+            hospital: doctor.hospital,
+            location: doctor.location,
+            contact: doctor.contact,
+            experience: doctor.experience,
+            Username,
+            UserPhone,
+            Useremail,
+        });
+        const savedAppointment = await bookedAppointment.save();
+        res.send("your appointment has booked");
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Server error" });
+    }
+}
 
 module.exports = {
     login, home, contact, editprofile, signup_post, login_post,
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
-    medicines, nearest
+    medicines, nearest,booked_appointment
 };

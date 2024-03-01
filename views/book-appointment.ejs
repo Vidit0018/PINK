@@ -1,13 +1,15 @@
 <%layout("/layouts/boilerplate.ejs")%>
 <head>
-    <link rel="stylesheet" href="css/book-appointment.css">
+    <link rel="stylesheet" href="/css/book-appointment.css">
 </head>
 <body>
     <div class="form-wrapper">
 
 <div class="container">
+   
     <div class="well">
-        
+        <form action="/book-appointment/<%=doctor._id%>/booked" method="post">
+         
         <div class="well-header">BOOK Appointment</div>
         <hr>
        <p class="header_p">Even though walk-ins are Welcome, 
@@ -19,25 +21,25 @@
         <!-- Contact by Input -->    
         <div class="form-group1">
           <label for="Select">Contac By:</label>
-          <select id="Select" class="form-control"><option>Email</option><option>Phone</option></select>
+          <select id="Select" class="form-control" ><option>Email</option></select>
         </div>
         
         <!-- fullname Input -->    
         <div class="form-group1">
             <label for="inputfullname"></label>
-            <input type="fullname" class="form-control" id="inputFullname" placeholder="Your Name">
+            <input type="fullname" class="form-control" id="inputFullname" placeholder="Your Name" name="Username">
         </div>
         
         <!-- email address Input -->
         <div class="form-group1">
             <label for="inputemail"></label>
-            <input type="email" class="form-control" id="inputemail" placeholder="Your Email">
+            <input type="email" class="form-control" id="inputemail" placeholder="Your Email" name="Useremail">
         </div>
         
        <!-- Phone Input --> 
          <div class="form-group1">
             <label for="inputphone"></label>
-            <input type="phone" class="form-control" id="inputphone" placeholder="Your Phone">
+            <input type="phone" class="form-control" id="inputphone" placeholder="Your Phone" name="UserPhone">
         </div>
         <hr>
       <!-- Appointment date -->  
@@ -100,7 +102,7 @@
         <button type="submit" class="btn">Cancel</button><hr>
         <span class="help-block">all appointment have $10 cancellation fee, thank you.</span>
     
-     
+    </form>
      <!-- form end -->
     </div><!-- well end -->
     </div>
