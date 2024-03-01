@@ -133,7 +133,7 @@ body {
   text-align: center;
   background-color: aliceblue;
   border-radius: 10rem;
-  border: 1.5px solid black;
+  border: 3px solid white;
   box-shadow: inset 0px 0px 40px 40px pink;
   transition: all 0.22s ease-in;
 }
@@ -141,13 +141,13 @@ body {
 .features div:hover {
   transform: scale(1.1);
   box-shadow: inset 0px 0px 40px 40px #f779a1;
-  border: 1.5px solid var(--first-color);
+  border: 3px solid var(--button-color);
 }
 
 .features img {
   height: 50%;
   width: 50%;
-  border: 2px solid black;
+  border: 2px solid var(--first-color);
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: 3px;
