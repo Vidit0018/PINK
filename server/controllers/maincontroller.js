@@ -3,6 +3,7 @@ const Volunteer = require("../config/models/Volunteerschema");
 const Medicine = require("../config/models/Medicineschema.js");
 const Doctor = require("../config/models/Doctorschema");
 const Booked = require("../config/models/booked_appointschema.js");
+const Donate=require("../config/models/Donationschema.js");
 const express = require('express');
 const { PythonShell } = require('python-shell');
 const app = express();
@@ -149,6 +150,27 @@ const donation = async (req, res) => {
 const donation_form = async (req, res) => {
     res.render("donation_form.ejs")
 }
+const donation_success=async(req,res)=>{
+    try{
+        const donate=new Donate({
+            Fname:req.body.Fname,
+            Lname:req.body.Lname,
+            Email:req.body.Email,
+            Address:req.body.Address,
+            City:req.body.City,
+            State:req.body.State,
+            Pincode:req.body.Pincode,
+
+        })
+        const data=await donate.save();
+        res.redirect("/donation");
+    }
+    catch(err){
+        console.log("error caught",err);
+    }
+    
+
+}
 const appointment = async (req, res) => {
     const Doctorlisting = await Doctor.find({})
     res.render("appointment.ejs", { Doctorlisting });
@@ -215,5 +237,5 @@ module.exports = {
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
-    bookings
+    bookings,donation_success
 };

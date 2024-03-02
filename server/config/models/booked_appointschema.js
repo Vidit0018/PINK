@@ -36,7 +36,20 @@ const bookedinfo=new mongoose.Schema({
     Useremail:{
         type:String,
            Unique:true,
+    },
+    Service:{
+        type:String,
+    },
+    Message:{
+        type:String,
+    },
+    Date_1:{
+        type:Number,
+    },
+    Date_2:{
+        type:Number,
     }
+    ,
 
     
 });
