@@ -20,6 +20,9 @@ const bookedinfo=new mongoose.Schema({
    experience: { 
        type: Number ,
    },
+   availability:{
+    type:[String]
+},
 //    user detail
     Username:{
      type:String,

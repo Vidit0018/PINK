@@ -33,7 +33,7 @@ const signup_post = async (req, res) => {
         });
         const user_registered = await user.save();
         console.log(user_registered);
-        res.send("Welcome! You have successfully registered.");
+        res.render("popup_signup.ejs");
     } catch (error) {
         console.error(error);
         res.status(500).send("Error registering user.");
@@ -136,6 +136,7 @@ const updateid = async (req, res, next) => {
         res.status(500).send("Internal Server Error");
     }
 }
+// <--------------------end of edit profile ka code------------------------>
 
 const volunteer = async (req, res) => {
     const volunteerlisting = await Volunteer.find({})
@@ -167,7 +168,7 @@ const bookings = async(req,res)=>{
    res.render("bookings.ejs",{booking});
 }
 
-
+// <--------------------python---------------------------------------------->
 const nearest = async (req, res) => {
     let ownData = await User.findById(req.params.id);
     console.log(ownData.Pincode)
@@ -178,7 +179,7 @@ const nearest = async (req, res) => {
     });
     pythonShell.end();
 }
-//<-------------------------------------------------------------------->
+//<------------------------------ booking appointment-------------------------------------->
 const booked_appointment = async (req, res) => {
 
     try {
@@ -195,6 +196,7 @@ const booked_appointment = async (req, res) => {
             location: doctor.location,
             contact: doctor.contact,
             experience: doctor.experience,
+            availability:doctor.availability,
             Username,
             UserPhone,
             Useremail,
@@ -206,6 +208,7 @@ const booked_appointment = async (req, res) => {
         res.status(500).json({ message: "Server error" });
     }
 }
+// <---------------------end of booking--------------------------------->
 
 module.exports = {
     login, home, contact, editprofile, signup_post, login_post,
