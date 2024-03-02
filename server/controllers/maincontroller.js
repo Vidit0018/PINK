@@ -163,7 +163,8 @@ const medicines = async (req, res) => {
     res.render("medicines.ejs", { Medicinelisting });
 }
 const bookings = async(req,res)=>{
-   res.render("bookings.ejs");
+    const booking=await Booked.find({});
+   res.render("bookings.ejs",{booking});
 }
 
 
@@ -199,7 +200,7 @@ const booked_appointment = async (req, res) => {
             Useremail,
         });
         const savedAppointment = await bookedAppointment.save();
-        res.send("your appointment has booked");
+        res.redirect("/appointment");
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Server error" });
