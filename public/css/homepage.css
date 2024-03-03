@@ -559,3 +559,74 @@ h6 {
     padding: 50px 30px;
   }
 }
+
+
+/* USER INFO  */
+
+.user-info{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem 4rem;
+  padding-left:10rem;
+}
+
+.left-image{
+  width:30%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.user-image{
+  width:85%;
+  height:50%;
+  border-radius:50%;
+  border:3px solid black;
+}
+
+.right-info{
+  display:flex;
+  width:60%;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+
+.edit-profile{
+  text-decoration:none;
+  color:white;
+}
+
+.edit-profile-info-section{
+  background-color:var(--button-color);
+  border:none;
+  border-radius:2rem;
+  transition:all 0.15s ease-in;
+}
+
+.edit-profile-info-section:hover{
+  color:var(--button-color);
+  background-color:pink;
+  border:none;
+}
+
+.view-profile{
+  border:none;
+  background-color: pink;
+  color:var(--button-color);
+  border-radius:2rem;
+  transition:all 0.15s ease-in'
+}
+
+.view-profile:hover{
+  border:none;
+  background-color: var(--button-color);
+  color:white;
+}
+
+
