@@ -3,6 +3,7 @@ const Volunteer = require("../config/models/Volunteerschema");
 const Medicine = require("../config/models/Medicineschema.js");
 const Doctor = require("../config/models/Doctorschema");
 const Booked = require("../config/models/booked_appointschema.js");
+const Donate=require("../config/models/Donationschema.js");
 const express = require('express');
 const { PythonShell } = require('python-shell');
 const app = express();
@@ -33,7 +34,7 @@ const signup_post = async (req, res) => {
         });
         const user_registered = await user.save();
         console.log(user_registered);
-        res.send("Welcome! You have successfully registered.");
+        res.render("popup_signup.ejs");
     } catch (error) {
         console.error(error);
         res.status(500).send("Error registering user.");
@@ -94,8 +95,9 @@ const editprofile = async (req, res) => {
 const updateid = async (req, res, next) => {
     try {
         const { id } = req.params;
-        console.log(req.files);
+       
         const imagepath1 = req.files.path;
+        console.log(imagepath1);
         // Upload image to Cloudinary
         cloudinary.uploader.upload(imagepath1.tempFilePath, async (err, result) => {
             if (err) {
@@ -136,6 +138,7 @@ const updateid = async (req, res, next) => {
         res.status(500).send("Internal Server Error");
     }
 }
+// <--------------------end of edit profile ka code------------------------>
 
 const volunteer = async (req, res) => {
     const volunteerlisting = await Volunteer.find({})
@@ -147,6 +150,27 @@ const donation = async (req, res) => {
 }
 const donation_form = async (req, res) => {
     res.render("donation_form.ejs")
+}
+const donation_success=async(req,res)=>{
+    try{
+        const donate=new Donate({
+            Fname:req.body.Fname,
+            Lname:req.body.Lname,
+            Email:req.body.Email,
+            Address:req.body.Address,
+            City:req.body.City,
+            State:req.body.State,
+            Pincode:req.body.Pincode,
+
+        })
+        const data=await donate.save();
+        res.redirect("/donation");
+    }
+    catch(err){
+        console.log("error caught",err);
+    }
+    
+
 }
 const appointment = async (req, res) => {
     const Doctorlisting = await Doctor.find({})
@@ -163,10 +187,11 @@ const medicines = async (req, res) => {
     res.render("medicines.ejs", { Medicinelisting });
 }
 const bookings = async(req,res)=>{
-   res.render("bookings.ejs");
+    const booking=await Booked.find({});
+   res.render("bookings.ejs",{booking});
 }
 
-
+// <--------------------python---------------------------------------------->
 const nearest = async (req, res) => {
     let ownData = await User.findById(req.params.id);
     console.log(ownData.Pincode)
@@ -177,7 +202,7 @@ const nearest = async (req, res) => {
     });
     pythonShell.end();
 }
-//<-------------------------------------------------------------------->
+//<------------------------------ booking appointment-------------------------------------->
 const booked_appointment = async (req, res) => {
 
     try {
@@ -194,17 +219,19 @@ const booked_appointment = async (req, res) => {
             location: doctor.location,
             contact: doctor.contact,
             experience: doctor.experience,
+            availability:doctor.availability,
             Username,
             UserPhone,
             Useremail,
         });
         const savedAppointment = await bookedAppointment.save();
-        res.send("your appointment has booked");
+        res.redirect("/appointment");
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Server error" });
     }
 }
+// <---------------------end of booking--------------------------------->
 
 
 
@@ -213,5 +240,5 @@ module.exports = {
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
-    bookings,
+    bookings,donation_success,
 };

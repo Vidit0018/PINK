@@ -1,14 +1,14 @@
 <%layout("/layouts/boilerplate.ejs")%>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/bookings.css">
+    <link rel="stylesheet" href="/css/bookings.css">
 </head>
 
 <body>
     <section class="container">
         <h1>Your Appointments</h1>
-            
-          <div class="row">
+        <% for(let list of booking){ %>
+            <div class="row">
             <article class="card fl-left">
               <section class="date">
                 <time datetime="23th feb">
@@ -16,12 +16,12 @@
                 </time>
               </section>
               <section class="card-cont">
-                <small>OPD Appointment</small>
+                <small><%=list.specialization%></small>
                 <h3>Shinchan</h3>
                 <div class="even-date">
                  <i class="fa fa-calendar"></i>
                  <time>
-                   <span>Wednesday 13 March 2024</span>
+                   <span></span>
                    <span>06:55pm to 07:15 am</span>
                  </time>
                 </div>
@@ -33,9 +33,9 @@
                 </div>
                 <a href="#">booked</a>
               </section>
-            </article>
-           
-          </div>
-        </div>
-        
+             </article>
+            </div>
+         
+         </div>
+         <%}%>
 </body>

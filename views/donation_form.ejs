@@ -4,8 +4,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/donation-form.css">
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="/css/donation-form.css">
+    <link rel="stylesheet" href="/css/global.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
     
     <link href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/78060/animate.min.css" rel="stylesheet" type="text/css">
@@ -50,18 +50,18 @@
     <section id="details">
       <div class="contact-info">
       <h2>Basic Information</h2>
-      <form class="clearfix">
+      <form class="clearfix" action="/donation_form" method="post">
         <div class="input-group-2">
         <label>First Name</label>
-        <input type="text">
+        <input type="text" name="Fname">
         </div>
         <div class="input-group-2">
         <label>Last Name</label>
-        <input type="text">
+        <input type="text" name="Lname">
         </div>
         <div class="input-group-1">
         <label>Email Address</label>
-        <input type="text">
+        <input type="text" name="Address">
         </div>
         <hr>
         <div class="input-group-1">
@@ -70,25 +70,25 @@
         </div>
         <div class="input-group-3">
         <label>City</label>
-        <input type="text">
+        <input type="text" name="City">
         </div>
         <div class="input-group-3">
         <label>State</label>
-        <input type="text">
+        <input type="text" name="State">
         </div>
         <div class="input-group-3">
         <label>Zip Code</label>
-        <input type="text">
+        <input type="number" name="Pincode">
+        </div>
+        <div class="clearfix">
+          <button class="back" type="button">Back
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button class="next" type="submit">Next</button>
         </div>
       </form>
-      <div class="clearfix">
-        <button class="back" type="button">Back
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <button class="next" type="button">Next</button>
-      </div>
       </div>
     </section>
     
