@@ -95,8 +95,9 @@ const editprofile = async (req, res) => {
 const updateid = async (req, res, next) => {
     try {
         const { id } = req.params;
-        console.log(req.files);
+       
         const imagepath1 = req.files.path;
+        console.log(imagepath1);
         // Upload image to Cloudinary
         cloudinary.uploader.upload(imagepath1.tempFilePath, async (err, result) => {
             if (err) {
