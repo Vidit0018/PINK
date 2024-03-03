@@ -206,10 +206,12 @@ const booked_appointment = async (req, res) => {
     }
 }
 
+
+
 module.exports = {
     login, home, contact, editprofile, signup_post, login_post,
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
-    bookings
+    bookings,
 };
