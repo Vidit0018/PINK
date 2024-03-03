@@ -241,10 +241,12 @@ const booked_appointment = async (req, res) => {
 }
 // <---------------------end of booking--------------------------------->
 
+
+
 module.exports = {
     login, home, contact, editprofile, signup_post, login_post,
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
-    bookings,donation_success
+    bookings,donation_success,
 };

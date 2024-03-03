@@ -3,8 +3,9 @@ const router = express.Router();
 
 const {login,home,contact,editprofile,signup_post,login_post,volunteer,
     donation,donation_form,appointment,bookAppointment,updateid,
-    medicines,nearest,booked_appointment,bookings,donation_success
+    medicines,nearest,booked_appointment,bookings,donation_success,
 } =require("../controllers/maincontroller")
+const {sendMail} =require("../controllers/mail")
 router.get("/", login);
 router.get("/home", home);
 router.get("/contact", contact);
@@ -16,6 +17,7 @@ router.get("/donation", donation);
 router.get("/donation_form", donation_form);
 router.post("/donation_form",donation_success);
 router.get("/appointment", appointment);
+router.get("/mail", sendMail);
 router.get("/bookings", bookings);
 router.get("/medicines", medicines);
 router.get("/book-appointment/:id", bookAppointment);

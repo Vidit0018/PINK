@@ -1,5 +1,7 @@
 const API_KEY = "aad850529a4540ceb99d4ce95436ad1d";
 const url = "https://newsapi.org/v2/everything?q=";
+const {sendMail} =require("../controllers/mail");
+
 
 window.addEventListener("load", () => {
     fetchNews("Breast");
