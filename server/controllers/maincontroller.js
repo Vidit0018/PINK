@@ -5,6 +5,7 @@ const Doctor = require("../config/models/Doctorschema");
 const Booked = require("../config/models/booked_appointschema.js");
 const Donate=require("../config/models/Donationschema.js");
 const express = require('express');
+const fs = require("fs");
 const { PythonShell } = require('python-shell');
 const app = express();
 const bcrypt = require("bcryptjs");
@@ -105,6 +106,13 @@ const updateid = async (req, res, next) => {
                 return res.status(500).send("Failed to upload image to Cloudinary");
             }
             console.log("Image uploaded to Cloudinary:", result);
+            fs.unlink(imagepath1.tempFilePath, (unlinkErr) => {
+                if (unlinkErr) {
+                    console.error("Error deleting temporary file:", unlinkErr);
+                } else {
+                    console.log("Temporary file deleted successfully");
+                }
+            });
 
             // Assuming you get the sport from the request body
             try {
