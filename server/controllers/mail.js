@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 const {google }= require('googleapis');
 
 const CLIENT_ID = '110051534542-c2jp5rlgdnf15kgl7a9luekmefqqf79d.apps.googleusercontent.com'
-const CLIENT_SECRET ='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'
+
 const REDIRECT_URI ='https://developers.google.com/oauthplayground'
 const REFRESH_TOKEN ='1//04YOg1pX3QuX-CgYIARAAGAQSNwF-L9IrDKx4NOXRpVpT_PvNItNZp4WSm9ZFqkLfXCiGPNQgqPt0GE__74e8lkZvunBFdZt5uFM'
 
