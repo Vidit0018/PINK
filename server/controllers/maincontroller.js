@@ -3,6 +3,7 @@ const Volunteer = require("../config/models/Volunteerschema");
 const Medicine = require("../config/models/Medicineschema.js");
 const Doctor = require("../config/models/Doctorschema");
 const Booked = require("../config/models/booked_appointschema.js");
+const {sendMail} =require("../controllers/mail")
 const Donate=require("../config/models/Donationschema.js");
 const express = require('express');
 const fs = require("fs");
@@ -190,6 +191,13 @@ const bookAppointment = async (req, res) => {
     res.render("book-appointment.ejs", { doctor })
 }
 
+const SendMailTemplate = async (req,res) =>{
+    const result = await sendMail(req.body);
+    if(result){
+        res.redirect("/appointment");
+    }
+}
+
 const medicines = async (req, res) => {
     const Medicinelisting = await Medicine.find({})
     res.render("medicines.ejs", { Medicinelisting });
@@ -206,13 +214,12 @@ const nearest = async (req, res) => {
     const pythonShell = new PythonShell('server/python/nearest.py', { args: ownData.Pincode });
     pythonShell.on('message', (message) => {
         res.render("nearest.ejs", { message : message.split("**")[0] , location:message.split("**")[1] });
-        console.log(message);
+
     });
     pythonShell.end();
 }
 //<------------------------------ booking appointment-------------------------------------->
 const booked_appointment = async (req, res) => {
-
     try {
         const { id } = req.params;
         const doctor = await Doctor.findById({ _id: id });
@@ -248,5 +255,5 @@ module.exports = {
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
-    bookings,donation_success,
+    bookings,donation_success, SendMailTemplate
 };

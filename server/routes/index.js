@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {login,home,contact,editprofile,signup_post,login_post,volunteer,
     donation,donation_form,appointment,bookAppointment,updateid,
-    medicines,nearest,booked_appointment,bookings,donation_success,
+    medicines,nearest,booked_appointment,bookings,donation_success, SendMailTemplate
 } =require("../controllers/maincontroller")
 const {sendMail} =require("../controllers/mail")
 router.get("/", login);
@@ -21,6 +21,7 @@ router.get("/mail", sendMail);
 router.get("/bookings", bookings);
 router.get("/medicines", medicines);
 router.get("/book-appointment/:id", bookAppointment);
+router.post("/book-appointment/:id/booked",SendMailTemplate)
 router.put("/editprofile/:id",updateid);
 router.get("/nearest/:id",nearest);
 router.post("/book-appointment/:id/booked",booked_appointment)
