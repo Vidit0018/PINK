@@ -21,8 +21,11 @@
     "express-fileupload": "^1.4.3",
     "express-session": "^1.18.0",
     "fs": "^0.0.1-security",
+<<<<<<< HEAD
+=======
     "googleapis": "^133.0.0",
     "handlebars": "^4.7.8",
+>>>>>>> c7f5048ac872a4bc729d98f8f2757088f2f9ade4
     "method-override": "^3.0.0",
     "mongoose": "^8.2.0",
     "multer": "^1.4.5-lts.1",
