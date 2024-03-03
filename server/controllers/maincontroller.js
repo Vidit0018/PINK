@@ -247,7 +247,19 @@ const booked_appointment = async (req, res) => {
     }
 }
 // <---------------------end of booking--------------------------------->
-
+// sorting
+const oncosurgeon=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({specialization :"Oncosurgeon"})
+    res.render("appointment.ejs", { Doctorlisting });
+}
+const oncologist=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({specialization :"Oncologist"})
+    res.render("appointment.ejs", { Doctorlisting });
+}
+const Radiation=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({specialization :"Radiation Oncologist"})
+    res.render("appointment.ejs", { Doctorlisting });
+}
 
 
 module.exports = {
@@ -255,5 +267,5 @@ module.exports = {
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
-    bookings,donation_success, SendMailTemplate
+    bookings,donation_success, SendMailTemplate,oncosurgeon,oncologist,Radiation 
 };
