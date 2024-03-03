@@ -25,8 +25,8 @@ async function sendMail(params) {
             }
         })
         const mailOptions = {
-            from: 'Team Pinkaware <pinkaware007@gmail.com>',
-            to: ' mannyisha808@gmail.com',
+            from: 'Team PinkAware <pinkaware007@gmail.com>',
+            to: params.Useremail,
             subject: "Appointment registered",
             text: `Dear ${params.Username},\n\nWe hope this email finds you well.\nWe are writing to confirm that your registration for an appointment has been successfully processed today. We are delighted to have you scheduled and look forward to providing you with our exceptional services.\nHere are the details of your appointment:\n\nDate: [Date that customer choose]\nTime: [Time of Appointment]\nVenue: [Venue Name]\nService/Reason for Appointment: [Brief description]\n\nPlease make sure to arrive at the venue on time and bring any necessary documents or information required for your appointment. If you have any specific requirements or questions, please feel free to reach out to us at [Contact Information].\n\nWe strive to ensure that your experience with us is smooth and satisfactory. \nYour feedback is valuable to us, and we appreciate any comments or suggestions you may have regarding our services.\nThank you for choosing PinkAware. We are committed to providing you with the best possible experience.`,
 
