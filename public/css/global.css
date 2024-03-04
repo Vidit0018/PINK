@@ -7,6 +7,9 @@
     --lightbg: #ff9bd2;
     --primary-font:"Poppins:ital",sans-serif;
 }
+a:-webkit-any-link{
+    text-decoration: none;
+}
 .login-button{
     font-family: "Poppins:ital",sans-serif;
     color:#C70A6E;
