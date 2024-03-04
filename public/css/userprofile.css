@@ -4,6 +4,9 @@
   --lightbg: #ff9bd2;
   --first-color-dark: #da0c81;
 }
+a{
+  text-decoration:none;
+}
 body {
   margin-top: 100px;
   /* background:url('../images/bg.jpg');
