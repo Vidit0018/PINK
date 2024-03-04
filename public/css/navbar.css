@@ -130,3 +130,6 @@ nav{
     color:white;
   }
 }
+.rounded-circle{
+    z-index: -1;
+}
