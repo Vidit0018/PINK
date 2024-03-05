@@ -586,6 +586,15 @@ h6 {
   height:50%;
   border-radius:50%;
   border:3px solid white;
+  transition:all 0.3s ease-in;
+}
+
+.user-image:hover{
+  transform:scale(1.2);
+  border:4px solid var(--button-color);
+  transform:translateY(-20px);
+  /* box-shadow:0 4px 10px 4px rgb(86, 84, 84); */
+  box-shadow: 0 8px 50px 10px white;
 }
 
 .right-info{
