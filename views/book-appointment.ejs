@@ -1,107 +1,115 @@
 <%layout("/layouts/boilerplate.ejs")%>
-<head>
-    <link rel="stylesheet" href="/css/book-appointment.css">
-</head>
-<body>
-    <div class="form-wrapper">
 
-<div class="container">
-   
-    <div class="well">
-        <form action="/book-appointment/<%=doctor._id%>/booked" method="post">
-         
-        <div class="well-header">BOOK Appointment</div>
-        <hr>
-       <p class="header_p">Even though walk-ins are Welcome, 
-        we encourage you to contact us via the form below to 
-        set your appointment. You will be contacted within 24 hours 
-        for confirmation.</p>
-        <hr>
-        
-        <!-- Contact by Input -->    
-        
-        <!-- fullname Input -->    
-        <div class="form-group1">
-            <label for="inputfullname"></label>
-            <input type="fullname" required class="form-control" id="inputFullname" placeholder="Your Name" name="Username" required>
+    <head>
+        <link rel="stylesheet" href="/css/book-appointment.css">
+    </head>
+
+    <body>
+        <div class="form-wrapper">
+
+            <div class="container">
+
+                <div class="well">
+                    <form action="/book-appointment/<%=doctor._id%>/booked" method="post">
+
+                        <div class="well-header">BOOK Appointment</div>
+                        <hr>
+                        <p class="header_p">Even though walk-ins are Welcome,
+                            we encourage you to contact us via the form below to
+                            set your appointment. You will be contacted within 24 hours
+                            for confirmation.</p>
+                        <hr>
+
+                        <!-- Contact by Input -->
+
+                        <!-- fullname Input -->
+                        <div class="form-group1">
+                            <label for="inputfullname"></label>
+                            <input type="fullname" required class="form-control" id="inputFullname"
+                                placeholder="Your Name" name="Username" required>
+                        </div>
+
+                        <!-- email address Input -->
+                        <div class="form-group1">
+                            <label for="inputemail"></label>
+                            <input type="email" required class="form-control" id="inputemail" placeholder="Your Email"
+                                name="Useremail" required>
+                        </div>
+
+                        <!-- Phone Input -->
+                        <div class="form-group1">
+                            <label for="inputphone"></label>
+                            <input type="phone" class="form-control" id="inputphone" placeholder="Your Phone"
+                                name="UserPhone" required>
+                        </div>
+                        <hr>
+                        <!-- Appointment date -->
+                        <p>Appointment Date:</p>
+
+                        <!-- 1st Choice Input -->
+
+
+
+                        <div class="form-group">
+                            <label for="datepicer">1st Choice:</label>
+                            <div class="input-group date" id="datetimepicker8">
+                                <input type="date" class="form-control" name="Date_1">
+                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- 2nd Choice Input -->
+                        <div class="form-group">
+                            <label for="datepicer">2nd Choice:</label>
+                            <div class="input-group date" id="datetimepicker8">
+                                <input type="date" class="form-control" name="Date_2"><span
+                                    class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                            </div>
+                        </div>
+
+
+                        <!-- Service Input -->
+                        <div class="form-group">
+                            <label for="Select">Desired Service:</label>
+                            <select id="Select" class="form-control" name="Service">
+                                <option>cancer</option>
+                                <option>Clipper Cut</option>
+                                <option>Corrective Color</option>
+                                <option>Extensions Per Track</option>
+                                <option>Full Foil</option>
+                                <option>Haircolor</option>
+                                <option>Haircut</option>
+                                <option>Partial Foil</option>
+                                <option>Relaxer/Retouch</option>
+                                <option>Shampoo, Blow Dry or Se</option>
+
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <textarea class="form-control" type="textarea" id="message" placeholder="Message"
+                                maxlength="140" rows="7" name="Message"></textarea>
+
+                        </div>
+
+                        <!-- Button Area-->
+                        <div class="checkbox">
+                            <label><input type="checkbox">Terms &amp; conditions</label>
+                        </div>
+
+                        <button type="submit" class="btn">Submit</button>
+                        <a type="Cancel" class="btn">Cancel</a>
+                        <hr>
+                        <span class="help-block">all appointment have $10 cancellation fee, thank you.</span>
+
+                    </form>
+                    <!-- form end -->
+                </div><!-- well end -->
+            </div>
         </div>
-        
-        <!-- email address Input -->
-        <div class="form-group1">
-            <label for="inputemail"></label>
-            <input type="email" required class="form-control" id="inputemail" placeholder="Your Email" name="Useremail" required>
-        </div>
-        
-       <!-- Phone Input --> 
-         <div class="form-group1">
-            <label for="inputphone"></label>
-            <input type="phone" class="form-control" id="inputphone" placeholder="Your Phone" name="UserPhone" required>
-        </div>
-        <hr>
-      <!-- Appointment date -->  
-        <p>Appointment Date:</p>
-        
-     <!-- 1st Choice Input --> 
-    
-    
-         
-    <div class="form-group">
-        <label for="datepicer">1st Choice:</label>
-        <div class="input-group date" id="datetimepicker8">
-        <input type="date" class="form-control" name="Date_1">
-        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-    </div>
-    </div>
-    
-    
-    
-                
-     <!-- 2nd Choice Input -->           
-    <div class="form-group">
-        <label for="datepicer">2nd Choice:</label>
-        <div class="input-group date" id="datetimepicker8">
-        <input type="date" class="form-control" name="Date_2"><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-        </div>
-    </div>
-    
-    
-    <!-- Service Input -->
-    <div class="form-group">
-        <label for="Select">Desired Service:</label>
-        <select id="Select" class="form-control" name="Service">
-        <option>cancer</option>
-        <option>Clipper Cut</option>
-        <option>Corrective Color</option>
-        <option>Extensions Per Track</option>
-        <option>Full Foil</option>
-        <option>Haircolor</option>
-        <option>Haircut</option>
-        <option>Partial Foil</option>
-        <option>Relaxer/Retouch</option>
-        <option>Shampoo, Blow Dry or Se</option>
-        
-        </select>
-    </div>
-    
-        
-    <div class="form-group">
-        <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7" name="Message"></textarea>
-                            
-    </div>
-    
-    <!-- Button Area-->
-     <div class="checkbox">
-            <label><input type="checkbox">Terms &amp; conditions</label>
-        </div>
-        
-        <button type="submit" class="btn">Submit</button>
-        <a type="Cancel" class="btn">Cancel</a><hr>
-        <span class="help-block">all appointment have $10 cancellation fee, thank you.</span>
-    
-    </form>
-     <!-- form end -->
-    </div><!-- well end -->
-    </div>
-    </div>
-    
-</body>
+
+    </body>

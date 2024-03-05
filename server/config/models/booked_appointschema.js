@@ -44,10 +44,10 @@ const bookedinfo=new mongoose.Schema({
         type:String,
     },
     Date_1:{
-        type:Number,
+        type:String,
     },
     Date_2:{
-        type:Number,
+        type:String,
     }
     ,
 
