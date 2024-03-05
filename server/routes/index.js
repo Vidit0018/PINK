@@ -4,7 +4,7 @@ const {login,home,contact,editprofile,signup_post,login_post,volunteer,
     donation,donation_form,appointment,bookAppointment,updateid,
     medicines,nearest,booked_appointment,bookings,donation_success, SendMailTemplate,oncosurgeon,
     oncologist,Radiation
-} =require("../controllers/maincontroller")
+}=require("../controllers/maincontroller")
 const {sendMail} =require("../controllers/mail")
 router.get("/", login);
 router.get("/home", home);

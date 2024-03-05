@@ -6,6 +6,7 @@ const Booked = require("../config/models/booked_appointschema.js");
 const {sendMail} =require("../controllers/mail")
 const Donate=require("../config/models/Donationschema.js");
 const express = require('express');
+const dotenv=require('dotenv');
 const fs = require("fs");
 const { PythonShell } = require('python-shell');
 const app = express();
@@ -226,7 +227,7 @@ const booked_appointment = async (req, res) => {
         if (!doctor) {
             return res.status(404).json({ message: "Doctor not found" });
         }
-        const { Username, UserPhone, Useremail } = req.body;
+        const { Username, UserPhone, Useremail,Date_1,Date_2,Message } = req.body;
         const bookedAppointment = new Booked({
             name: doctor.name,
             specialization: doctor.specialization,
@@ -238,8 +239,12 @@ const booked_appointment = async (req, res) => {
             Username,
             UserPhone,
             Useremail,
+            Date_1,
+            Date_2,
+            Message,
         });
         const savedAppointment = await bookedAppointment.save();
+        console.log(savedAppointment);
         res.redirect("/appointment");
     } catch (error) {
         console.error(error);

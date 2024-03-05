@@ -18,7 +18,6 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }));
-
 app.engine("ejs",ejs_mate);
 app.use(express.urlencoded({ extended: true }));
 const methodoverride=require("method-override");
