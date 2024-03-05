@@ -43,6 +43,9 @@ const bookedinfo=new mongoose.Schema({
     Message:{
         type:String,
     },
+    Time:{
+           type:String,
+    },
     Date_1:{
         type:String,
     },
