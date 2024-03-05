@@ -110,7 +110,8 @@ nav{
     color: var(--text-color-1);
     transition:all 0.2s ease-in;
     &:hover{
-        color:rgb(37, 81, 117);
+        color:rgb(101, 21, 83);
+        transform:scale(1.05);
     }
 }
 
@@ -119,6 +120,7 @@ nav{
     transition:all 0.2s ease-in;
     &:hover{
         color:var(--text-color-1);
+        transform:scale(1.2);
     }
 }
 
