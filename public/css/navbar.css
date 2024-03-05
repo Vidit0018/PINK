@@ -65,6 +65,11 @@ nav{
     color: var(--bg-color-dark-1);
 }
 
+.company-logo img{
+    height:60px;
+    width:60px;
+}
+
 .nav-links ul li{
     margin-right:4.5rem;
 }
