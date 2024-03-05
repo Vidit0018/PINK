@@ -37,10 +37,5 @@ router.get("/gurugram",gurugram);
 router.get("/noida",noida);
 router.get("/delhi",delhi);
 router.get("/All",All);
-<<<<<<< HEAD
-
-
-=======
 router.get("/Lab",lab)
->>>>>>> c1c13b7d0e56df086350d8282c72677a614de6f5
 module.exports= router;
