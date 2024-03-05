@@ -57,4 +57,4 @@ const bookedinfo=new mongoose.Schema({
     
 });
 const Booked=new mongoose.model("Booked",bookedinfo);
-module.exports=Booked;
+module.exports={Booked};
