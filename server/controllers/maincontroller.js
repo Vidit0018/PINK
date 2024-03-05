@@ -3,7 +3,8 @@ const Volunteer = require("../config/models/Volunteerschema");
 const Medicine = require("../config/models/Medicineschema.js");
 const Doctor = require("../config/models/Doctorschema");
 const Booked = require("../config/models/booked_appointschema.js");
-const {sendMail} =require("../controllers/mail")
+const {sendMail} =require("../controllers/mail");
+const Lab=require("../config/models/labschema.js")
 const Donate=require("../config/models/Donationschema.js");
 const express = require('express');
 const dotenv=require('dotenv');
@@ -290,7 +291,8 @@ const All=async(req,res)=>{
 }
 // linking
 const lab=async(req,res)=>{
-    res.render("lab.ejs");
+    const Lablisting=await Lab.find({});
+    res.render("lab.ejs",{Lablisting});
 }
 
 

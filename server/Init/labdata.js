@@ -1,6 +1,6 @@
 const labdata=[
     {
-      LabName: "Bio-Reference Laboratories",
+      LabName: "Bio-Reference Lab",
       LabAddress: "Sector 18, Noida, Uttar Pradesh",
       City: "Noida",
       Availability: ["Mammogram", "BreastUltrasound", "BreastMRI"],
