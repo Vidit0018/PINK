@@ -3,7 +3,7 @@ const url = "https://newsapi.org/v2/everything?q=";
 
 
 window.addEventListener("load", () => {
-    fetchNews("Breast");
+    fetchNews("breast cancer");
 });
 
 function reload(){

@@ -87,3 +87,6 @@ p, label, checkbox {
 .help-block {
     color:white;
 }
+#message{
+    margin-top: 5px;
+}
