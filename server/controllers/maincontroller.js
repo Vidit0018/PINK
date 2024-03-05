@@ -61,7 +61,7 @@ const login_post = async (req, res) => {
 
         // Check if the user exists in the database
         if (!user) {
-            return res.status(404).send("User not found");
+            return res.render("pop_login.ejs");
         }
 
         const isMatch = await bcrypt.compare(Password, user.Password);
@@ -122,6 +122,7 @@ const updateid = async (req, res, next) => {
                     Birthday: req.body.Birthday,
                     Age: req.body.Age,
                     Phone: req.body.Phone,
+                    Name:req.body.Name,
                     City: req.body.City,
                     Address: req.body.Address,
                     Pincode: req.body.Pincode,
@@ -262,7 +263,23 @@ const oncologist=async(req,res)=>{
     res.render("appointment.ejs", { Doctorlisting });
 }
 const Radiation=async(req,res)=>{
-    const Doctorlisting = await Doctor.find({specialization :"Radiation Oncologist"})
+    const Doctorlisting = await Doctor.find({specialization :"Radiation Oncologist"});
+    res.render("appointment.ejs", { Doctorlisting });
+}
+const faridabad=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({location :"Faridabad"});
+    res.render("appointment.ejs", { Doctorlisting });
+}
+const delhi=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({location :"Delhi"});
+    res.render("appointment.ejs", { Doctorlisting });
+}
+const gurugram=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({location :"Gurugram"});
+    res.render("appointment.ejs", { Doctorlisting });
+}
+const noida=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({location :"Noida"});
     res.render("appointment.ejs", { Doctorlisting });
 }
 
@@ -272,5 +289,6 @@ module.exports = {
     volunteer, donation, donation_form,
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
-    bookings,donation_success, SendMailTemplate,oncosurgeon,oncologist,Radiation 
+    bookings,donation_success, SendMailTemplate,oncosurgeon,oncologist,Radiation ,
+    gurugram,delhi,noida,faridabad
 };

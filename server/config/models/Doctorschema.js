@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 const Doctorinfo=new mongoose.Schema({
     
-        name: { 
+        name:{ 
             type: String ,
         },
         specialization: {
