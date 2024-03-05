@@ -152,7 +152,6 @@ const updateid = async (req, res, next) => {
 
 const volunteer = async (req, res) => {
     const volunteerlisting = await Volunteer.find({})
-    console.log(volunteerlisting);
     res.render("volunteer.ejs", { volunteerlisting });
 }
 const donation = async (req, res) => {
@@ -244,7 +243,6 @@ const booked_appointment = async (req, res,next) => {
             Message,
         });
         const savedAppointment = await bookedAppointment.save();
-        console.log(savedAppointment);
         next();
     } catch (error) {
         console.error(error);
