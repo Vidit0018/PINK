@@ -227,7 +227,7 @@ const booked_appointment = async (req, res,next) => {
         if (!doctor) {
             return res.status(404).json({ message: "Doctor not found" });
         }
-        const { Username, UserPhone, Useremail,Date_1,Date_2,Message } = req.body;
+        const { Username, UserPhone, Useremail,Date_1,Date_2,Time,Message } = req.body;
         const bookedAppointment = new Booked({
             name: doctor.name,
             specialization: doctor.specialization,
@@ -241,6 +241,7 @@ const booked_appointment = async (req, res,next) => {
             Useremail,
             Date_1,
             Date_2,
+            Time,
             Message,
         });
         const savedAppointment = await bookedAppointment.save();
