@@ -207,6 +207,9 @@ const bookings = async(req,res)=>{
     const booking=await Booked.find({});
    res.render("bookings.ejs",{booking});
 }
+const medicine_order = async(req,res)=>{
+   res.render("medicine_order.ejs");
+}
 
 // <--------------------python---------------------------------------------->
 const nearest = async (req, res) => {
@@ -288,5 +291,5 @@ module.exports = {
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
     bookings,donation_success, SendMailTemplate,oncosurgeon,oncologist,Radiation ,
-    gurugram,delhi,noida,faridabad
+    gurugram,delhi,noida,faridabad,medicine_order
 };
