@@ -5,7 +5,7 @@ import sys
 
 geolocator = Nominatim(user_agent="pink_community")
 
-coordinates = json.load(open("server/python/static_locations.json"))
+coordinates = json.load(open("server/python\static_locations.json"))
 
 def find_nearest(target_coordinate):
     nearest_coordinates = []
