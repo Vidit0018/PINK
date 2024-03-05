@@ -288,6 +288,8 @@ const All=async(req,res)=>{
     const Doctorlisting = await Doctor.find({});
     res.render("appointment.ejs", { Doctorlisting });
 }
+// linking
+
 
 
 module.exports = {
@@ -296,6 +298,6 @@ module.exports = {
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
     bookings,donation_success, SendMailTemplate,oncosurgeon,oncologist,Radiation ,
-    gurugram,delhi,noida,faridabad,medicine_order,All,
+    gurugram,delhi,noida,faridabad,medicine_order,All
     
 };

@@ -25,6 +25,7 @@ router.get("/book-appointment/:id", bookAppointment);
 router.post("/book-appointment/:id/booked",booked_appointment , SendMailTemplate )
 router.put("/editprofile/:id",updateid);
 router.get("/nearest/:id",nearest);
+
 // sorting
 // <------sorting on basis of specialization---------------->
 router.get("/Oncosurgeon", oncosurgeon);
