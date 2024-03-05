@@ -280,6 +280,10 @@ const noida=async(req,res)=>{
     const Doctorlisting = await Doctor.find({location :"Noida"});
     res.render("appointment.ejs", { Doctorlisting });
 }
+const All=async(req,res)=>{
+    const Doctorlisting = await Doctor.find({});
+    res.render("appointment.ejs", { Doctorlisting });
+}
 
 
 module.exports = {
@@ -288,5 +292,5 @@ module.exports = {
     appointment, bookAppointment, updateid,
     medicines, nearest,booked_appointment,
     bookings,donation_success, SendMailTemplate,oncosurgeon,oncologist,Radiation ,
-    gurugram,delhi,noida,faridabad
+    gurugram,delhi,noida,faridabad,All
 };
