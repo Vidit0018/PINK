@@ -220,7 +220,7 @@ const nearest = async (req, res) => {
     pythonShell.end();
 }
 //<------------------------------ booking appointment-------------------------------------->
-const booked_appointment = async (req, res) => {
+const booked_appointment = async (req, res,next) => {
     try {
         const { id } = req.params;
         const doctor = await Doctor.findById({ _id: id });
@@ -245,7 +245,7 @@ const booked_appointment = async (req, res) => {
         });
         const savedAppointment = await bookedAppointment.save();
         console.log(savedAppointment);
-        res.redirect("/appointment");
+        next();
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Server error" });
