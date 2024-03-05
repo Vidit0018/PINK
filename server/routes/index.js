@@ -3,7 +3,7 @@ const router = express.Router();
 const {login,home,contact,editprofile,signup_post,login_post,volunteer,
     donation,donation_form,appointment,bookAppointment,updateid,
     medicines,nearest,booked_appointment,bookings,donation_success,oncosurgeon,
-    oncologist,Radiation, SendMailTemplate,faridabad,gurugram,noida,delhi,All,medicine_order
+    oncologist,Radiation, SendMailTemplate,faridabad,gurugram,noida,delhi,All,medicine_order,lab
 }=require("../controllers/maincontroller")
 const {sendMail} =require("../controllers/mail")
 router.get("/", login);
@@ -37,5 +37,5 @@ router.get("/gurugram",gurugram);
 router.get("/noida",noida);
 router.get("/delhi",delhi);
 router.get("/All",All);
-
+router.get("/Lab",lab)
 module.exports= router;

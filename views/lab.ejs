@@ -1,0 +1,113 @@
+<%layout("/layouts/boilerplate.ejs")%>
+<head>
+    <link rel="stylesheet" href="css\lab.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+
+            <div class="flex-shrink-0 p-3 sidemenu" >
+                <a href="#" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                  <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                  <span class="fs-5 fw-semibold">Filter</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+                  <li class="mb-1">
+                    <button class="btn  btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                      Location
+                    </button>
+                    <div class="collapse" id="home-collapse" >
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="/delhi" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Delhi</a></li>
+                        <li><a href="/noida" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Noida</a></li>
+                        <li><a href="/gurugram" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Gurugram</a></li>
+                        <li><a href="/faridabad" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Faridabad</a></li>
+                        <li><a href="/All" class="link-body-emphasis d-inline-flex text-decoration-none rounded">All</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                      Test Type
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Mammogram</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Breast Ultrasound</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Breast MRI</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Biopsy</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">All</a></li>
+
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                      Availability
+                    </button>
+                    <div class="collapse" id="orders-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sun</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Mon</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Tues</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Wen</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Thurs</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Fri</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sat</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  </li>
+                  <li class="border-top my-3"></li>
+                  <li class="mb-1">
+                    <a href="#"><button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                      Your Appointments
+                    </button>
+                    </a>
+                    
+                    
+              </div>
+        </div>
+       
+       <!-- //////////////////////////// right . -->
+       
+        <div class="right">
+            <% for(var i=0; i<10;i++){ %>
+            <div class="card-container">
+                <span class="pro">Verified</span>
+                <img class="round" src="images\Lab-1.jpg" alt="" height="127px" width="128px" />
+                <h3>Lab company</h3>
+                <h6>Test Type</h6>
+                <p>lab ,location</p>
+                <div class="buttons">
+                    <a href="#">
+                    <button class="primary">
+                        Book Appointment
+                    </button>
+                    </a>
+                    <button class="primary ghost">
+                        Contact
+                    </button>
+                </div>
+                <div class="skills">
+                    <h6>4.7</h6>
+                    <ul>
+                       
+                        <li>Availability : MON,TUES</li>
+                        <li>Consultation Fee : ₹ 1000</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            <%}%>
+            
+        
+        
+        </div>
+
+
+        
+    </div>
+</body>
