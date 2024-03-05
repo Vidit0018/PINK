@@ -73,13 +73,13 @@
        <!-- //////////////////////////// right . -->
        
         <div class="right">
-            <% for(var i=0; i<10;i++){ %>
+          <% for(let list of Lablisting){ %>
             <div class="card-container">
                 <span class="pro">Verified</span>
                 <img class="round" src="images\Lab-1.jpg" alt="" height="127px" width="128px" />
-                <h3>Lab company</h3>
-                <h6>Test Type</h6>
-                <p>lab ,location</p>
+                <h3><%=list.LabName%></h3>
+                <h6><%list.Availability%></h6>
+                <p><%=list.LabAddress%> ,<%=list.City%></p>
                 <div class="buttons">
                     <a href="#">
                     <button class="primary">
@@ -91,11 +91,11 @@
                     </button>
                 </div>
                 <div class="skills">
-                    <h6>4.7</h6>
+                    <h6><%=list.Rating%></h6>
                     <ul>
                        
-                        <li>Availability : MON,TUES</li>
-                        <li>Consultation Fee : ₹ 1000</li>
+                        <li>Availability : <br><%=list.OpeningDays%></li>
+                        <li>Test Fee : <%=list.LabCharges%></li>
                         
                     </ul>
                 </div>
