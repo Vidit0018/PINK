@@ -7,7 +7,7 @@
     --lightbg: #ff9bd2;
     --primary-font:"Poppins:ital",sans-serif;
 }
-a:-webkit-any-link{
+a{
     text-decoration: none;
 }
 .login-button{
