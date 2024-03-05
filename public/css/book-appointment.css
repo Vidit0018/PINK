@@ -90,3 +90,9 @@ p, label, checkbox {
 #message{
     margin-top: 5px;
 }
+#doctor_name{
+    display: none;
+}
+#doctor_hospital{
+    display: none;
+}

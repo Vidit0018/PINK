@@ -24,16 +24,24 @@
                         <!-- Contact by Input -->
 
                         <!-- fullname Input -->
-                        <div class="form-group1">
+                        <div class="form-group1" >
                             <label for="inputfullname"></label>
                             <input type="fullname" required class="form-control" id="inputFullname"
                                 placeholder="Your Name" name="Username" required>
                         </div>
-                        <!-- doctor-hospital -->
-                        <div class="form-group1">
+                        <!-- doctor-name -->
+                        <div class="form-group1" id="doctor_name">
                             <label for="inputfullname"></label>
                             <input type="fullname" required class="form-control" id="inputFullname"
-                                placeholder="Your Name" value="<%=doctor.hospital%>" required>
+                                placeholder="Your Name" value="<%=doctor.name%>" required
+                                name="dname">
+                        </div>
+                        <!-- doctor-name -->
+                        <!-- doctor-hospital -->
+                        <div class="form-group1"id="doctor_hospital">
+                            <label for="inputfullname"></label>
+                            <input type="fullname" required class="form-control" id="inputFullname"
+                                placeholder="Your Name" value="<%=doctor.hospital%>" required name="hosp">
                         </div>
                         <!-- doctor-hospital -->
 
