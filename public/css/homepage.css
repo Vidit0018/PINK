@@ -644,3 +644,7 @@ h6 {
 .right-info p{
   color:white;
 }
+
+#contact{
+  scroll-behavior: smooth;
+}
