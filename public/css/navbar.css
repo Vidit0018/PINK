@@ -137,3 +137,8 @@ nav{
     color:white;
   }
 }
+
+.contact-1{
+    transition:all 1s ease-in;
+    scroll-behavior:smooth;
+}
