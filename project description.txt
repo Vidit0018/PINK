@@ -1,0 +1,32 @@
+## Inspiration
+One of the major challenges related to breast cancer is late detection of it . If detected early many of the casualties caused by Breast Cancer can be avoided  , also the conventional  methods used for pre - stages detection are inaccessible to many , this inspired me and my team to build a platform that not only helps the women in early detection of breast cancer but also provide them full support by various means as in our opinion we 've tried and build the most Inclusive Platform around Breast Cancer .
+
+## What it does
+The project uses and **ML Model** for **DETECTION OF BREAST CANCER **using ultrasound imaging . It calculates the risk factor of Breast Cancer on our end and then we guide the user on taking appointments and navigate them through their medical Journey to fight the disease.  
+The platform has sections for **APPOINTMENTS , LAB-TESTS , MEDICATIONS  ZONES**all the three mentioned sections make the med Journey really easy as all the med facilities are available under on roof .
+One of the major thing that serve as a gamechanger in the patient's journey is the **COMMUNITY SUPPORT **. The platform provides **COMMUNITY CHAT ** feature where all the community members can chat , discuss their problems and occur to a concrete conclusion this helps releasing the mental pressure on the patients tremendously .
+ Then there's a ** NEARBY ZONE **  which shows the user the community members which are nearest located to them . The user can reach out to them incase of a med-emergency .
+All the above is followed by ** VOLUNTEER & FUNDRAISER ZONES ** in the Volunteer zone all the volunteer activities are listed people can join them using the Join now feature , the fundraiser zone provides a medium for people  to donate for the ones who cant afford the med treatments on their own .
+**CHATBOT**  to resolve any kind of grievances of the users we have integrated a Chatbot which not only deals with the user problems but also being trained on a knowledge base about Breast Cancer has the potential to answer any doubts regarding breast cancer.
+
+## How we built it
+
+The journey started with creating a ML model for detection , finding the right dataset for it , then we moved on to building the website , backend functionalities were then added . All the required Datasets were uploaded to our database . Finishing touches were given later by adding functionality to almost every element on the website.
+
+## Challenges we ran into
+There were many challenges such as :
+1. Finding the right dataset was extremely challenging .
+2.Building  a UI that speaks out itself for our aim was quite a brainstorming task .
+
+## Accomplishments that we're proud of
+1. We consider we've built definitely an amazing UI .
+2.The model will surely help in early detection .
+3.We have cracked the code in terms of making the portal fully inclusive. 
+
+## What we learned
+1. How to deep dive into problem solving .
+2. How user driven websites can be built more engaging .
+3.How a big problem can be solved by breaking it into silos
+
+## What's next for Pinkaware
+Many more features are in the line of action. We are definitely going to make this project a big success.
