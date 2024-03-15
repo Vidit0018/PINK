@@ -1,7 +1,7 @@
 // const API_KEY = "aad850529a4540ceb99d4ce95436ad1d";
 // const url = "https://newsapi.org/v2/everything?q=";
 
-const myRequest = new Request("news.json")
+const myRequest = new Request("js/news.json");
 
 
 window.addEventListener("load", () => {
